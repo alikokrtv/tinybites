@@ -64,13 +64,27 @@ const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">{t('footer.follow')}</h3>
             <div className="flex space-x-4 mt-2">
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <a 
+                href="https://www.instagram.com/tinybitesofficial_?igsh=MWlwMjV5NXNsODM4dg==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white transition-colors"
+                aria-label="Follow us on Instagram"
+              >
                 <Instagram size={24} />
               </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <a 
+                href="#" 
+                className="text-white/80 hover:text-white transition-colors"
+                aria-label="Follow us on Facebook"
+              >
                 <Facebook size={24} />
               </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <a 
+                href="#" 
+                className="text-white/80 hover:text-white transition-colors"
+                aria-label="Follow us on Twitter"
+              >
                 <Twitter size={24} />
               </a>
             </div>

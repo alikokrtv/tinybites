@@ -115,13 +115,25 @@ const Navbar: React.FC = () => {
             </button>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-gray-700 hover:text-pink-600 transition-colors"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Actions */}
+          <div className="md:hidden flex items-center gap-4">
+            {/* Language Switcher for Mobile */}
+            <button 
+              onClick={toggleLanguage}
+              className="flex items-center text-gray-700 hover:text-pink-600 transition-colors"
+            >
+              <Globe size={18} />
+              <span className="uppercase ml-1">{language === 'en' ? 'TR' : 'EN'}</span>
+            </button>
+            
+            {/* Mobile Menu Button */}
+            <button
+              className="text-gray-700 hover:text-pink-600 transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 

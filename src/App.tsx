@@ -53,7 +53,7 @@ function App() {
             </main>
             <Footer />
             <CookieConsent />
-            <WhatsAppButton phoneNumber="+90 535 054 91 91" />
+            <WhatsAppButton phoneNumber="+90 507 772 13 93" />
           </div>
         </Router>
       </AnimationProvider>
