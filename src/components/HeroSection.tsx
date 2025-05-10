@@ -20,13 +20,21 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-3xl text-white">
           <AnimatedSection animation="fade-up" delay={200}>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-2">
               {t('home.hero.title')}
             </h1>
           </AnimatedSection>
           
+          <AnimatedSection animation="fade-up" delay={300}>
+            <p className="text-2xl md:text-3xl font-light italic mb-4">"{t('home.hero.slogan')}"</p>
+          </AnimatedSection>
+          
           <AnimatedSection animation="fade-up" delay={400}>
-            <p className="text-xl md:text-2xl mb-8">{t('home.hero.subtitle')}</p>
+            <p className="text-xl md:text-2xl mb-4">{t('home.hero.subtitle')}</p>
+          </AnimatedSection>
+          
+          <AnimatedSection animation="fade-up" delay={500}>
+            <p className="text-lg md:text-xl mb-8">{t('home.hero.description')}</p>
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up" delay={600}>

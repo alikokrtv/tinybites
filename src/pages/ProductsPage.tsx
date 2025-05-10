@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import AnimatedSection from '../components/AnimatedSection';
 import ProductCard from '../components/ProductCard';
@@ -7,7 +8,16 @@ import { allProducts } from '../data/products';
 
 const ProductsPage: React.FC = () => {
   const { t } = useLanguage();
-  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const { categoryId } = useParams<{ categoryId?: string }>();
+  const navigate = useNavigate();
+  const [activeCategory, setActiveCategory] = useState<string>(categoryId || 'all');
+  
+  // Update active category when URL parameter changes
+  useEffect(() => {
+    if (categoryId) {
+      setActiveCategory(categoryId);
+    }
+  }, [categoryId]);
   
   const categories = [
     { id: 'all', name: t('products.all') },
@@ -39,7 +49,15 @@ const ProductsPage: React.FC = () => {
                 key={category.id}
                 category={category.name}
                 isActive={activeCategory === category.id}
-                onClick={() => setActiveCategory(category.id)}
+                onClick={() => {
+                  setActiveCategory(category.id);
+                  // Update URL when category changes
+                  if (category.id === 'all') {
+                    navigate('/products');
+                  } else {
+                    navigate(`/products/${category.id}`);
+                  }
+                }}
               />
             ))}
           </div>

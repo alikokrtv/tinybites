@@ -14,6 +14,8 @@ export const translations = {
     // Home
     'home.hero.title': 'Tiny Bites',
     'home.hero.subtitle': 'Joyful tableware for little ones',
+    'home.hero.slogan': 'tummy flies',
+    'home.hero.description': 'Colorful tableware for little ones to make mealtime fun and enjoyable',
     'home.hero.cta': 'Explore Products',
     'home.featured.title': 'Featured Products',
     'home.featured.viewAll': 'View All Products',
@@ -91,6 +93,8 @@ export const translations = {
     // Home
     'home.hero.title': 'Tiny Bites',
     'home.hero.subtitle': 'Küçükler için neşeli sofra ürünleri',
+    'home.hero.slogan': 'tummy flies',
+    'home.hero.description': 'Yemek saatlerini eğlenceli ve keyifli hale getiren küçükler için renkli sofra ürünleri',
     'home.hero.cta': 'Ürünleri Keşfet',
     'home.featured.title': 'Öne Çıkan Ürünler',
     'home.featured.viewAll': 'Tüm Ürünleri Gör',

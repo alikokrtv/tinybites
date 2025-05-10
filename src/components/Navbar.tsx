@@ -31,16 +31,19 @@ const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-white shadow-md py-2'
-          : 'bg-transparent py-4'
+          : 'bg-yellow-50 py-3'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/images/tiny-bites/tinylogo.png" alt="Tiny Bites" className="h-14 md:h-16" />
-            <div className="font-bold text-2xl md:text-3xl">
-              <span className="text-pink-600">Tiny</span>
-              <span className="text-blue-500">Bites</span>
+            <img src="/images/tiny-bites/tinylogo.png" alt="Tiny Bites" className="h-10 md:h-12" />
+            <div className="flex flex-col">
+              <div className="font-bold text-xl md:text-2xl">
+                <span className="text-pink-600">Tiny</span>
+                <span className="text-blue-500">Bites</span>
+              </div>
+              <p className="text-xs font-light italic text-gray-600">"tummy flies"</p>
             </div>
           </Link>
 
