@@ -107,7 +107,7 @@ export const allProducts: Product[] = [
         'Dökülmeleri önlemek için kaymaz taban'
       ]
     },
-    price: '290₺'
+
   },
   {
     id: '4',
@@ -141,7 +141,7 @@ export const allProducts: Product[] = [
         'Hediye kutusu ambalajı mevcuttur'
       ]
     },
-    price: '450₺'
+
   },
   
   // Storage Boxes
@@ -212,7 +212,7 @@ export const allProducts: Product[] = [
         'Boyutlar: 40 x 30 x 20 cm'
       ]
     },
-    price: '180₺'
+
   },
   {
     id: '7',
@@ -246,7 +246,7 @@ export const allProducts: Product[] = [
         'Dolap alanından tasarruf sağlayan istifleme tasarımı'
       ]
     },
-    price: '120₺'
+
   },
   
   // Baskets
@@ -317,7 +317,7 @@ export const allProducts: Product[] = [
         'Boyutlar: 40 x 30 x 25 cm'
       ]
     },
-    price: '210₺'
+
   },
   {
     id: '10',
@@ -351,7 +351,7 @@ export const allProducts: Product[] = [
         'Boyutlar: 35 x 25 x 20 cm'
       ]
     },
-    price: '195₺'
+
   }
 ];
 

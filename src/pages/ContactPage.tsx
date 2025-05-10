@@ -136,9 +136,9 @@ const ContactPage: React.FC = () => {
               
               <div className="mt-12">
                 <img 
-                  src="https://images.pexels.com/photos/3662840/pexels-photo-3662840.jpeg" 
-                  alt="Colorful children's products" 
-                  className="rounded-lg shadow-lg"
+                  src="/images/tiny-bites/elephant-tableware-2.jpg" 
+                  alt="Tiny Bites ürünleri" 
+                  className="rounded-lg shadow-lg object-cover h-48 w-full"
                 />
               </div>
             </div>

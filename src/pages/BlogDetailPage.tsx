@@ -12,7 +12,7 @@ const blogPosts = [
       tr: "Çocuklar İçin Sağlıklı Beslenme Alışkanlıkları"
     },
     date: "2025-04-15",
-    image: "https://images.unsplash.com/photo-1594614271360-0ed9a570ae15?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/tiny-bites/elephant-tableware-pink.jpg",
     summary: {
       en: "Discover simple ways to encourage healthy eating habits in children from an early age.",
       tr: "Çocuklarda erken yaştan itibaren sağlıklı beslenme alışkanlıklarını teşvik etmenin basit yollarını keşfedin."
@@ -55,7 +55,7 @@ const blogPosts = [
       tr: "Renklerle Yemek Saatini Eğlenceli Hale Getirmek"
     },
     date: "2025-03-22",
-    image: "https://images.unsplash.com/photo-1581600140682-79bee0227682?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/tiny-bites/elephant-tableware-blue.jpg",
     summary: {
       en: "Learn how colorful tableware can transform mealtime into an exciting experience for kids.",
       tr: "Renkli sofra ürünlerinin çocuklar için yemek saatini nasıl heyecan verici bir deneyime dönüştürebileceğini öğrenin."
@@ -112,7 +112,7 @@ const blogPosts = [
       tr: "Aile Yemeklerinin Önemi"
     },
     date: "2025-02-10",
-    image: "https://images.unsplash.com/photo-1547573854-74d2a71d0826?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/tiny-bites/elephant-tableware-grey.jpg",
     summary: {
       en: "Why sitting down together as a family for meals matters for your child's development.",
       tr: "Yemeklerde aile olarak bir araya gelmenin çocuğunuzun gelişimi için neden önemli olduğu."

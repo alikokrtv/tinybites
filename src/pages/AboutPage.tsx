@@ -54,9 +54,9 @@ const AboutPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <AnimatedSection animation="slide-in-left">
             <img 
-              src="https://images.pexels.com/photos/6489663/pexels-photo-6489663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+              src="/images/tiny-bites/elephant-tableware-1.jpg" 
               alt="Our story" 
-              className="rounded-lg shadow-xl w-full h-auto"
+              className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
           </AnimatedSection>
           
@@ -124,9 +124,9 @@ const AboutPage: React.FC = () => {
         <AnimatedSection animation="fade-up" className="mt-16">
           <div className="relative">
             <img 
-              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-              alt="Our team" 
-              className="rounded-lg shadow-xl w-full h-auto"
+              src="/images/storage-boxes/lv-237-shell.jpg" 
+              alt="Our products" 
+              className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
               <div className="text-white p-6 md:p-12">
