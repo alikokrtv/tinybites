@@ -36,8 +36,12 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <img src="/images/logo.png" alt="Tiny Bites" className="h-12" />
+          <Link to="/" className="flex items-center gap-2">
+            <img src="/images/tiny-bites/tinylogo.png" alt="Tiny Bites" className="h-14 md:h-16" />
+            <div className="font-bold text-2xl md:text-3xl">
+              <span className="text-pink-600">Tiny</span>
+              <span className="text-blue-500">Bites</span>
+            </div>
           </Link>
 
           {/* Desktop Menu */}

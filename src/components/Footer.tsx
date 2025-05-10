@@ -12,9 +12,12 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <Link to="/" className="text-3xl font-bold flex items-center">
-              <span className="text-white">Tiny</span>
-              <span className="text-yellow-300">Bites</span>
+            <Link to="/" className="flex items-center gap-2">
+              <img src="/images/tiny-bites/tinylogo.png" alt="Tiny Bites" className="h-12" />
+              <div className="font-bold text-2xl">
+                <span className="text-white">Tiny</span>
+                <span className="text-yellow-300">Bites</span>
+              </div>
             </Link>
             <p className="mt-4 text-white/80">
               Colorful tableware for little ones to make mealtime fun and enjoyable.
