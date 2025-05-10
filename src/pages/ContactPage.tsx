@@ -111,8 +111,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold text-xl mb-2">{t('contact.info.address')}</h3>
                     <p className="text-white/90">
-                      123 Rainbow Street<br />
-                      Istanbul, Turkey 34000
+                      Kadıköy<br />
+                      Istanbul, Turkey 34710
                     </p>
                   </div>
                 </div>
