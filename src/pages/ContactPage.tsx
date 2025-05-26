@@ -5,63 +5,18 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
   
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState<string | null>(null);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError(null);
-    setSubmitSuccess(false);
-    
-    try {
-      // Send data to our API endpoint
-      const apiUrl = '/api/email-handler.php';
-        
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message
-        })
-      });
+  const handleSubmit = () => {
+    // Form will be submitted normally, but we'll show a success message
+    setTimeout(() => {
+      setFormSubmitted(true);
       
-      const result = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(result.message || 'Failed to send email');
-      }
-      
-      // Success
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', message: '' });
-      
-      // Clear success message after 5 seconds
+      // Reset form success message after 5 seconds
       setTimeout(() => {
-        setSubmitSuccess(false);
+        setFormSubmitted(false);
       }, 5000);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitError(t('contact.form.error'));
-    } finally {
-      setIsSubmitting(false);
-    }
+    }, 500);
   };
   
   return (
@@ -83,72 +38,70 @@ const ContactPage: React.FC = () => {
                 {t('contact.form.submit')}
               </h2>
               
-              <form onSubmit={handleSubmit} name="contact-form">
-                <div className="mb-6">
-                  <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-                    {t('contact.form.name')}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-pink-500 focus:ring focus:ring-pink-200 transition-colors"
-                  />
+              {formSubmitted ? (
+                <div className="p-4 bg-green-100 text-green-700 rounded-lg mb-6">
+                  <p className="font-medium">{t('contact.form.success')}</p>
+                  <p className="mt-2">{t('language') === 'tr' ? 'En kısa sürede size geri dönüş yapacağız.' : 'We will get back to you as soon as possible.'}</p>
                 </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                    {t('contact.form.email')}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-pink-500 focus:ring focus:ring-pink-200 transition-colors"
-                  />
-                </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
-                    {t('contact.form.message')}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-pink-500 focus:ring focus:ring-pink-200 transition-colors"
-                  ></textarea>
-                </div>
-                
-                {submitSuccess && (
-                  <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-lg">
-                    {t('contact.form.success')}
-                  </div>
-                )}
-                
-                {submitError && (
-                  <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-lg">
-                    {submitError}
-                  </div>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-lg font-medium transition-colors ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+              ) : (
+                <form 
+                  action="https://formsubmit.co/info@tinybites.net" 
+                  method="POST"
+                  onSubmit={handleSubmit}
                 >
-                  {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
-                </button>
-              </form>
+                  {/* FormSubmit.co settings */}
+                  <input type="hidden" name="_subject" value="Tiny Bites Website Contact Form" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_next" value={window.location.href} />
+                  
+                  <div className="mb-6">
+                    <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                      {t('contact.form.name')}
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-pink-500 focus:ring focus:ring-pink-200 transition-colors"
+                    />
+                  </div>
+                  
+                  <div className="mb-6">
+                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                      {t('contact.form.email')}
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-pink-500 focus:ring focus:ring-pink-200 transition-colors"
+                    />
+                  </div>
+                  
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                      {t('contact.form.message')}
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={5}
+                      required
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-pink-500 focus:ring focus:ring-pink-200 transition-colors"
+                    ></textarea>
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    className="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-lg font-medium transition-colors"
+                  >
+                    {t('contact.form.submit')}
+                  </button>
+                </form>
+              )}
             </div>
           </AnimatedSection>
           
