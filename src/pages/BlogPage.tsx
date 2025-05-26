@@ -59,7 +59,7 @@ const BlogPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-28 pb-16">
+    <div className="pt-32 pb-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">

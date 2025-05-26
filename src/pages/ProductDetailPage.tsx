@@ -14,7 +14,7 @@ const ProductDetailPage: React.FC = () => {
   
   if (!product) {
     return (
-      <div className="min-h-screen pt-24 pb-16 flex items-center justify-center">
+      <div className="min-h-screen pt-32 pb-16 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-800 mb-4">
             {language === 'tr' ? 'Ürün bulunamadı' : 'Product not found'}
@@ -36,7 +36,7 @@ const ProductDetailPage: React.FC = () => {
     : [product.image];
   
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-32 pb-16">
       <div className="container mx-auto px-4 md:px-6">
         {/* Breadcrumb */}
         <div className="mb-8">

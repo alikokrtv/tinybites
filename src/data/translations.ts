@@ -95,17 +95,23 @@ export const translations = {
     
     // Home
     'home.hero.title': 'Tiny Bites',
-    'home.hero.subtitle': 'Küçükler için neşeli sofra ürünleri',
+    'home.hero.subtitle': 'Minikler icin sofra ürünleri',
     'home.hero.slogan': 'tummy flies',
-    'home.hero.description': 'Yemek saatlerini eğlenceli ve keyifli hale getiren küçükler için renkli sofra ürünleri',
+    'home.hero.description': 'Miniklerimiz icin yemek saatlerini eglenceli ve keyifli hale getiren sofra ürünleri',
     'home.hero.cta': 'Ürünleri Keşfet',
     'home.featured.title': 'Öne Çıkan Ürünler',
     'home.featured.viewAll': 'Tüm Ürünleri Gör',
     'home.about.title': 'Hikayemiz',
+    'home.story.content': 'Tiny Bites olarak, bebeklerin ve küçük çocukların yemek saatlerinin ne kadar zorlu olabileceğini biliyoruz. Her gün, miniklerin beslenme alışkanlıkları ve yemek zamanları, bazen hem onlar hem de aileleri için bir mücadeleye dönüşebilir. Biz de tam bu noktada devreye girdik.\nKuruluş amacımız, çocukların yemek saatlerini daha keyifli, eğlenceli ve kolay hale getirmekti. Bebekler ve küçük çocuklar için tasarladığımız plastik mama tabak ve kaplari, yemeklerin sadece besleyici değil, aynı zamanda eğlenceli olmasını sağlamak için tasarlandı. Her bir ürünümüz, kullanım kolaylığı ve güvenlik ön planda tutularak çocukların sağlığına zarar vermeyen materyallerden üretilmektedir.\nTiny Bites olarak, her çocuğun yemek saati zamanının, bir anne ve babanın da üzerinde mutlu bir anı olarak kalmasını istiyoruz. Bu yüzden sadece estetik değil, aynı zamanda fonksiyonel ürünler sunmaya özen gösteriyoruz. Çocuklarınızın her öğününde onlara daha yakın, daha eğlenceli ve daha sağlıklı bir deneyim sunmayı hedefliyoruz.\nSiz ve miniklerinizi mutlu etmek için yola çıktığımız bu yolculukta, güvenilirliğimizden ve kalitemizden ödün vermeden büyümeye devam ediyoruz.\nBununla birlikte, Loren Plastic markamız ile işlevsellik ve estetiği bir araya getiriyoruz.\nGıda saklama kaplarından dekoratif sepetlere uzanan ürün yelpazemiz, modern yaşam alanlarına şıklık ve düzen katmak üzere tasarlandı.\nFarklı yaş gruplarına ve yaşam tarzlarına hitap eden bu iki marka ile Loren Plastic ailesi olarak, her evde yerimizi almanın mutluluğunu yaşıyoruz.',
     'home.about.description': 'Tiny Bites, çocuklar için özel olarak tasarlanmış renkli, eğlenceli ve güvenli sofra ürünleri üreterek yemek saatlerini sabırsızlıkla bekledikleri bir maceraya dönüştürür.',
     'home.about.button': 'Daha Fazla',
     
     // Products
+    'products.explore.title': 'Ürünleri Kesfet',
+    'products.tiny-bites.title': 'Tiny Bites Koleksiyonu',
+    'products.tiny-bites.description': 'Bebek ve çocuklar için özel olarak tasarlanmış ürünler',
+    'products.loren-plastic.title': 'Loren Plastic Koleksiyonu',
+    'products.loren-plastic.description': 'Saklama Kapları ve Sepetler',
     'products.title': 'Ürünlerimiz',
     'products.subtitle': 'Renkli koleksiyonumuzu keşfedin',
     'products.tableware': 'Sofra Ürünleri',

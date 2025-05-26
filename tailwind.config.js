@@ -7,31 +7,31 @@ export default {
         sans: ['Poppins', 'sans-serif'],
       },
       colors: {
-        // Primary colors - Light Teal/Green (from logo)
+        // Primary color - Teal/Green from logo (#6AADA3)
         'primary': {
-          50: '#e6f7ed',
-          100: '#d0efe1',
-          200: '#a1dfc2',
-          300: '#6dcd9f',
-          400: '#3dbb7d',
-          500: '#1ea064',
-          600: '#188652',
-          700: '#146c42',
-          800: '#0f5233',
-          900: '#0b3d27',
+          50: '#f0f9f8',
+          100: '#d9eeed',
+          200: '#b4e0dd',
+          300: '#90d1cc',
+          400: '#7fc4be',
+          500: '#6AADA3', // Logo rengi
+          600: '#548a82',
+          700: '#436e68',
+          800: '#32524e',
+          900: '#213634',
         },
-        // Secondary colors - Light Blue (from logo)
+        // Secondary color - Darker Teal from logo (#228183)
         'secondary': {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          50: '#e7f3f3',
+          100: '#cfe6e7',
+          200: '#a1d0d1',
+          300: '#73b9ba',
+          400: '#469ea0',
+          500: '#228183', // Logo rengi
+          600: '#1b6768',
+          700: '#144d4e',
+          800: '#0e3435',
+          900: '#071a1b',
         },
         // Accent colors - Soft Yellow (complementary to logo colors)
         'accent': {

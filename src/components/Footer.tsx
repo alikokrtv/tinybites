@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-r from-secondary-500 to-primary-500 text-white">
+    <footer className="bg-gradient-to-r from-secondary-600 to-primary-500 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
@@ -26,18 +26,18 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">{t('nav.products')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/products" className="text-white/80 hover:text-white transition-colors">
-                  {t('products.tableware')}
+                <Link to="/products/tableware" className="text-white/80 hover:text-white transition-colors">
+                  {t('language') === 'tr' ? 'Sofra Ürünleri' : 'Tableware'}
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="text-white/80 hover:text-white transition-colors">
-                  {t('products.storageBoxes')}
+                <Link to="/products/storageBoxes" className="text-white/80 hover:text-white transition-colors">
+                  {t('language') === 'tr' ? 'Saklama Kapları' : 'Storage Boxes'}
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="text-white/80 hover:text-white transition-colors">
-                  {t('products.baskets')}
+                <Link to="/products/baskets" className="text-white/80 hover:text-white transition-colors">
+                  {t('language') === 'tr' ? 'Sepetler' : 'Baskets'}
                 </Link>
               </li>
             </ul>

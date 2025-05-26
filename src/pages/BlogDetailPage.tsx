@@ -198,7 +198,7 @@ const BlogDetailPage: React.FC = () => {
   
   if (!post) {
     return (
-      <div className="pt-28 pb-16 text-center">
+      <div className="pt-32 pb-16 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-gray-800">
             {t('language') === 'tr' ? 'Blog yazısı bulunamadı' : 'Blog post not found'}
@@ -228,7 +228,7 @@ const BlogDetailPage: React.FC = () => {
   const currentLanguage = t('language') === 'tr' ? 'tr' : 'en';
   
   return (
-    <div className="pt-28 pb-16">
+    <div className="pt-32 pb-16">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <Link 
           to="/blog" 
