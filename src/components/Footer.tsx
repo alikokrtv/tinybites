@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <div className="flex flex-col items-start">
               <Link to="/" className="flex items-center gap-2 mb-2">
-                <img src="/images/tiny-bites/tinylogo.png" alt="Tiny Bites" className="h-12" />
+                <img src="/images/tiny-bites/logo.png" alt="Tiny Bites" className="h-12 mix-blend-multiply" />
                 <div className="font-bold text-2xl">
                   <span className="text-white">Tiny</span>
                   <span className="text-yellow-300">Bites</span>

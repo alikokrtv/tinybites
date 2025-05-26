@@ -27,10 +27,8 @@ const ContactPage: React.FC = () => {
     setSubmitSuccess(false);
     
     try {
-      // Send data to our API endpoint (Railway or Netlify)
-      const apiUrl = import.meta.env.PROD
-        ? '/api/send-email' // Railway production endpoint
-        : '/.netlify/functions/send-email'; // Netlify development endpoint
+      // Send data to our API endpoint
+      const apiUrl = '/api/email-handler.php';
         
       const response = await fetch(apiUrl, {
         method: 'POST',
