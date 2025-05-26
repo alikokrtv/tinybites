@@ -26,7 +26,7 @@ const CookieConsent: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-md z-50 p-4 sm:p-6">
+    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-md z-40 p-4 sm:p-6 mb-0 sm:mb-0 md:mb-0 lg:mb-0">
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-gray-700 text-sm sm:text-base">
           <p>

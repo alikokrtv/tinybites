@@ -36,15 +36,8 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <img src="/images/tiny-bites/logo.png" alt="Tiny Bites" className="h-10 md:h-12" />
-            <div className="flex flex-col">
-              <div className="font-bold text-xl md:text-2xl">
-                <span className="text-pink-600">Tiny</span>
-                <span className="text-blue-500">Bites</span>
-              </div>
-              <p className="text-xs font-light italic text-gray-600">"tummy flies"</p>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src="/images/tiny-bites/logo.png" alt="Tiny Bites" className="h-16 md:h-20 object-contain mix-blend-multiply" />
           </Link>
 
           {/* Desktop Menu */}
