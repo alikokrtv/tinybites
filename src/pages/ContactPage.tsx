@@ -16,12 +16,50 @@ const ContactPage: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Message sent successfully!');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitError(null);
+    setSubmitSuccess(false);
+    
+    try {
+      // Send data to our Netlify serverless function
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      });
+      
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.message || 'Failed to send email');
+      }
+      
+      // Success
+      setSubmitSuccess(true);
+      setFormData({ name: '', email: '', message: '' });
+      
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setSubmitSuccess(false);
+      }, 5000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitError(t('contact.form.error'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -43,7 +81,7 @@ const ContactPage: React.FC = () => {
                 {t('contact.form.submit')}
               </h2>
               
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} name="contact-form">
                 <div className="mb-6">
                   <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
                     {t('contact.form.name')}
@@ -89,11 +127,24 @@ const ContactPage: React.FC = () => {
                   ></textarea>
                 </div>
                 
+                {submitSuccess && (
+                  <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-lg">
+                    {t('contact.form.success')}
+                  </div>
+                )}
+                
+                {submitError && (
+                  <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-lg">
+                    {submitError}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-lg font-medium transition-colors"
+                  disabled={isSubmitting}
+                  className={`w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-lg font-medium transition-colors ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
-                  {t('contact.form.submit')}
+                  {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
                 </button>
               </form>
             </div>
@@ -129,7 +180,7 @@ const ContactPage: React.FC = () => {
                   <Mail className="mr-4 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-xl mb-2">{t('contact.info.email')}</h3>
-                    <p className="text-white/90">info@tinybites.com</p>
+                    <p className="text-white/90">info@tinybites.net</p>
                   </div>
                 </div>
               </div>
