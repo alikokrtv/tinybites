@@ -85,7 +85,7 @@ const AboutPage: React.FC = () => {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {t('about.title')}
           </h1>
-          <div className="h-1 w-20 bg-pink-500 mx-auto"></div>
+          <div className="h-1 w-20 bg-primary-500 mx-auto"></div>
         </AnimatedSection>
         
         {/* Our Story */}
@@ -116,7 +116,7 @@ const AboutPage: React.FC = () => {
         
         {/* Our Mission */}
         <AnimatedSection animation="fade-up" className="mb-20">
-          <div className="bg-pink-50 rounded-xl p-8 md:p-12">
+          <div className="bg-secondary-50 rounded-xl p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">
               {t('about.mission.title')}
             </h2>

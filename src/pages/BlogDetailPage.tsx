@@ -205,7 +205,7 @@ const BlogDetailPage: React.FC = () => {
           </h1>
           <Link 
             to="/blog" 
-            className="inline-flex items-center text-pink-600 hover:text-pink-700 mt-4"
+            className="inline-flex items-center text-primary-600 hover:text-primary-700 mt-4"
           >
             <ArrowLeft size={20} className="mr-2" />
             {t('language') === 'tr' ? 'Blog\'a geri dön' : 'Back to blog'}
@@ -232,7 +232,7 @@ const BlogDetailPage: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <Link 
           to="/blog" 
-          className="inline-flex items-center text-pink-600 hover:text-pink-700 mb-6"
+          className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-6"
         >
           <ArrowLeft size={20} className="mr-2" />
           {t('language') === 'tr' ? 'Blog\'a geri dön' : 'Back to blog'}
@@ -256,7 +256,7 @@ const BlogDetailPage: React.FC = () => {
         </div>
         
         <div 
-          className="prose prose-pink max-w-none"
+          className="prose prose-primary max-w-none"
           dangerouslySetInnerHTML={{ __html: post.content[currentLanguage] }}
         />
       </div>

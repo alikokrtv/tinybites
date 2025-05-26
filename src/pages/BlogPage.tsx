@@ -81,14 +81,14 @@ const BlogPage: React.FC = () => {
                 />
               </div>
               <div className="p-6">
-                <p className="text-sm text-pink-500 mb-2">{formatDate(post.date)}</p>
+                <p className="text-sm text-primary-500 mb-2">{formatDate(post.date)}</p>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">
                   {post.title[t('language') === 'tr' ? 'tr' : 'en']}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {post.summary[t('language') === 'tr' ? 'tr' : 'en']}
                 </p>
-                <Link to={`/blog/${post.id}`} className="text-pink-600 font-medium hover:text-pink-700 transition-colors flex items-center">
+                <Link to={`/blog/${post.id}`} className="text-primary-600 font-medium hover:text-primary-700 transition-colors flex items-center">
                   {post.title[t('language') === 'tr' ? 'tr' : 'en'] === post.title.tr ? 'Devamını Oku' : 'Read More'} →
                 </Link>
               </div>

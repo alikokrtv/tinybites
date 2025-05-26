@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               {t('home.featured.title')}
             </h2>
-            <div className="h-1 w-20 bg-pink-500 mx-auto"></div>
+            <div className="h-1 w-20 bg-primary-500 mx-auto"></div>
           </AnimatedSection>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
           <AnimatedSection animation="fade-up" className="text-center mt-12">
             <Link 
               to="/products" 
-              className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-medium inline-block transition-colors duration-300"
+              className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-full font-medium inline-block transition-colors duration-300"
             >
               {t('home.featured.viewAll')}
             </Link>
@@ -58,7 +58,7 @@ const HomePage: React.FC = () => {
                   alt="Elephant tableware for kids" 
                   className="rounded-lg shadow-xl w-full h-auto"
                 />
-                <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-pink-500 rounded-full opacity-20"></div>
+                <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-secondary-500 rounded-full opacity-20"></div>
                 <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-500 rounded-full opacity-20"></div>
               </div>
             </AnimatedSection>
@@ -94,7 +94,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <AnimatedSection animation="zoom-in" delay={0}>
-              <div className="aspect-square bg-pink-400 rounded-2xl p-6 flex items-center justify-center shadow-lg">
+              <div className="aspect-square bg-secondary-400 rounded-2xl p-6 flex items-center justify-center shadow-lg">
                 <img 
                   src="/images/tiny-bites/elephant-tableware-pink.jpg" 
                   alt="Pink elephant tableware for kids" 

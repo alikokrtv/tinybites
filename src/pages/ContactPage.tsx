@@ -64,7 +64,7 @@ const ContactPage: React.FC = () => {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-pink-500 focus:ring focus:ring-pink-200 transition-colors"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring focus:ring-primary-200 transition-colors"
                     />
                   </div>
                   
@@ -77,7 +77,7 @@ const ContactPage: React.FC = () => {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-pink-500 focus:ring focus:ring-pink-200 transition-colors"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring focus:ring-primary-200 transition-colors"
                     />
                   </div>
                   
@@ -90,13 +90,13 @@ const ContactPage: React.FC = () => {
                       name="message"
                       rows={5}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-pink-500 focus:ring focus:ring-pink-200 transition-colors"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring focus:ring-primary-200 transition-colors"
                     ></textarea>
                   </div>
                   
                   <button
                     type="submit"
-                    className="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-lg font-medium transition-colors"
+                    className="w-full bg-primary-500 hover:bg-primary-600 text-white py-3 rounded-lg font-medium transition-colors"
                   >
                     {t('contact.form.submit')}
                   </button>
@@ -106,7 +106,7 @@ const ContactPage: React.FC = () => {
           </AnimatedSection>
           
           <AnimatedSection animation="slide-in-right">
-            <div className="bg-gradient-to-br from-blue-500 to-pink-500 text-white rounded-xl shadow-xl p-6 md:p-8 h-full">
+            <div className="bg-gradient-to-br from-secondary-500 to-primary-500 text-white rounded-xl shadow-xl p-6 md:p-8 h-full">
               <h2 className="text-2xl font-bold mb-6">
                 {t('contact.info.title')}
               </h2>

@@ -169,8 +169,8 @@ const CatalogPage: React.FC = () => {
               onClick={() => setFilter('all')}
               className={`px-4 py-2 text-sm font-medium rounded-md ${
                 filter === 'all'
-                  ? 'bg-white text-pink-600 shadow-sm'
-                  : 'text-gray-700 hover:text-pink-600'
+                  ? 'bg-white text-primary-600 shadow-sm'
+                  : 'text-gray-700 hover:text-primary-600'
               }`}
             >
               {currentLang === 'tr' ? 'Tüm Kataloglar' : 'All Catalogs'}
@@ -179,8 +179,8 @@ const CatalogPage: React.FC = () => {
               onClick={() => setFilter('featured')}
               className={`px-4 py-2 text-sm font-medium rounded-md ${
                 filter === 'featured'
-                  ? 'bg-white text-pink-600 shadow-sm'
-                  : 'text-gray-700 hover:text-pink-600'
+                  ? 'bg-white text-primary-600 shadow-sm'
+                  : 'text-gray-700 hover:text-primary-600'
               }`}
             >
               {currentLang === 'tr' ? 'Öne Çıkanlar' : 'Featured'}
@@ -215,7 +215,7 @@ const CatalogPage: React.FC = () => {
                     <a 
                       href={`${CATALOG_ROOT}${catalog.pdfFile}`} 
                       download
-                      className="flex items-center bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700 transition-colors"
+                      className="flex items-center bg-primary-600 text-white px-4 py-2 rounded-md hover:bg-primary-700 transition-colors"
                     >
                       <Download size={18} className="mr-2" />
                       {currentLang === 'tr' ? 'PDF İndir' : 'Download PDF'}
@@ -225,7 +225,7 @@ const CatalogPage: React.FC = () => {
                   <div className="mt-4">
                     <button
                       onClick={() => toggleExpand(catalog.id)}
-                      className="flex items-center text-pink-600 hover:text-pink-700 transition-colors"
+                      className="flex items-center text-primary-600 hover:text-primary-700 transition-colors"
                     >
                       {expandedId === catalog.id ? (
                         <>
@@ -241,7 +241,7 @@ const CatalogPage: React.FC = () => {
                     </button>
                     
                     {expandedId === catalog.id && (
-                      <div className="mt-4 pl-4 border-l-2 border-pink-200">
+                      <div className="mt-4 pl-4 border-l-2 border-primary-200">
                         <h3 className="font-medium text-gray-800 mb-2">
                           {currentLang === 'tr' ? 'Ürün Özellikleri' : 'Product Features'}
                         </h3>
@@ -271,7 +271,7 @@ const CatalogPage: React.FC = () => {
           ))}
         </div>
         
-        <div className="mt-12 bg-pink-50 rounded-xl p-6 md:p-8">
+        <div className="mt-12 bg-secondary-50 rounded-xl p-6 md:p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             {currentLang === 'tr' ? 'Özel Katalog mu İstiyorsunuz?' : 'Need a Custom Catalog?'}
           </h2>
@@ -282,7 +282,7 @@ const CatalogPage: React.FC = () => {
           </p>
           <a 
             href="/contact" 
-            className="inline-flex items-center bg-pink-600 text-white px-6 py-3 rounded-md hover:bg-pink-700 transition-colors"
+            className="inline-flex items-center bg-primary-600 text-white px-6 py-3 rounded-md hover:bg-primary-700 transition-colors"
           >
             {currentLang === 'tr' ? 'İletişime Geçin' : 'Contact Us'}
           </a>

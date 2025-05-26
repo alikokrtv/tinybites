@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-white shadow-md py-2'
-          : 'bg-yellow-50 py-3'
+          : 'bg-secondary-50 py-3'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -46,8 +46,8 @@ const Navbar: React.FC = () => {
               to="/" 
               className={`font-medium transition-colors ${
                 location.pathname === '/' 
-                  ? 'text-pink-600' 
-                  : 'text-gray-700 hover:text-pink-600'
+                  ? 'text-primary-600' 
+                  : 'text-gray-700 hover:text-primary-600'
               }`}
             >
               {t('nav.home')}
@@ -56,8 +56,8 @@ const Navbar: React.FC = () => {
               to="/products" 
               className={`font-medium transition-colors ${
                 location.pathname === '/products' 
-                  ? 'text-pink-600' 
-                  : 'text-gray-700 hover:text-pink-600'
+                  ? 'text-primary-600' 
+                  : 'text-gray-700 hover:text-primary-600'
               }`}
             >
               {t('nav.products')}
@@ -66,8 +66,8 @@ const Navbar: React.FC = () => {
               to="/catalog" 
               className={`font-medium transition-colors ${
                 location.pathname === '/catalog' 
-                  ? 'text-pink-600' 
-                  : 'text-gray-700 hover:text-pink-600'
+                  ? 'text-primary-600' 
+                  : 'text-gray-700 hover:text-primary-600'
               }`}
             >
               {t('nav.catalog')}
@@ -76,8 +76,8 @@ const Navbar: React.FC = () => {
               to="/about" 
               className={`font-medium transition-colors ${
                 location.pathname === '/about' 
-                  ? 'text-pink-600' 
-                  : 'text-gray-700 hover:text-pink-600'
+                  ? 'text-primary-600' 
+                  : 'text-gray-700 hover:text-primary-600'
               }`}
             >
               {t('nav.about')}
@@ -86,8 +86,8 @@ const Navbar: React.FC = () => {
               to="/blog" 
               className={`font-medium transition-colors ${
                 location.pathname === '/blog' 
-                  ? 'text-pink-600' 
-                  : 'text-gray-700 hover:text-pink-600'
+                  ? 'text-primary-600' 
+                  : 'text-gray-700 hover:text-primary-600'
               }`}
             >
               {t('nav.blog')}
@@ -96,15 +96,15 @@ const Navbar: React.FC = () => {
               to="/contact" 
               className={`font-medium transition-colors ${
                 location.pathname === '/contact' 
-                  ? 'text-pink-600' 
-                  : 'text-gray-700 hover:text-pink-600'
+                  ? 'text-primary-600' 
+                  : 'text-gray-700 hover:text-primary-600'
               }`}
             >
               {t('nav.contact')}
             </Link>
             <button 
               onClick={toggleLanguage}
-              className="flex items-center text-gray-700 hover:text-pink-600 transition-colors"
+              className="flex items-center text-gray-700 hover:text-secondary-600 transition-colors"
             >
               <Globe size={18} className="mr-1" />
               <span className="uppercase">{language === 'en' ? 'TR' : 'EN'}</span>
@@ -116,7 +116,7 @@ const Navbar: React.FC = () => {
             {/* Language Switcher for Mobile */}
             <button 
               onClick={toggleLanguage}
-              className="flex items-center text-gray-700 hover:text-pink-600 transition-colors"
+              className="flex items-center text-gray-700 hover:text-secondary-600 transition-colors"
             >
               <Globe size={18} />
               <span className="uppercase ml-1">{language === 'en' ? 'TR' : 'EN'}</span>
@@ -124,7 +124,7 @@ const Navbar: React.FC = () => {
             
             {/* Mobile Menu Button */}
             <button
-              className="text-gray-700 hover:text-pink-600 transition-colors"
+              className="text-gray-700 hover:text-secondary-600 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -141,7 +141,7 @@ const Navbar: React.FC = () => {
               to="/" 
               className={`font-medium py-2 transition-colors ${
                 location.pathname === '/' 
-                  ? 'text-pink-600' 
+                  ? 'text-primary-600' 
                   : 'text-gray-700'
               }`}
               onClick={closeMobileMenu}
@@ -152,7 +152,7 @@ const Navbar: React.FC = () => {
               to="/products" 
               className={`font-medium py-2 transition-colors ${
                 location.pathname === '/products' 
-                  ? 'text-pink-600' 
+                  ? 'text-primary-600' 
                   : 'text-gray-700'
               }`}
               onClick={closeMobileMenu}
@@ -163,7 +163,7 @@ const Navbar: React.FC = () => {
               to="/catalog" 
               className={`font-medium py-2 transition-colors ${
                 location.pathname === '/catalog' 
-                  ? 'text-pink-600' 
+                  ? 'text-primary-600' 
                   : 'text-gray-700'
               }`}
               onClick={closeMobileMenu}
@@ -174,7 +174,7 @@ const Navbar: React.FC = () => {
               to="/about" 
               className={`font-medium py-2 transition-colors ${
                 location.pathname === '/about' 
-                  ? 'text-pink-600' 
+                  ? 'text-primary-600' 
                   : 'text-gray-700'
               }`}
               onClick={closeMobileMenu}
@@ -185,7 +185,7 @@ const Navbar: React.FC = () => {
               to="/blog" 
               className={`font-medium py-2 transition-colors ${
                 location.pathname === '/blog' 
-                  ? 'text-pink-600' 
+                  ? 'text-primary-600' 
                   : 'text-gray-700'
               }`}
               onClick={closeMobileMenu}
@@ -196,7 +196,7 @@ const Navbar: React.FC = () => {
               to="/contact" 
               className={`font-medium py-2 transition-colors ${
                 location.pathname === '/contact' 
-                  ? 'text-pink-600' 
+                  ? 'text-primary-600' 
                   : 'text-gray-700'
               }`}
               onClick={closeMobileMenu}

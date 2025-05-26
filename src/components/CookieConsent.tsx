@@ -31,7 +31,7 @@ const CookieConsent: React.FC = () => {
         <div className="text-gray-700 text-sm sm:text-base">
           <p>
             {t('cookies.message')}
-            <a href="/privacy" className="text-pink-600 hover:underline ml-1">
+            <a href="/privacy" className="text-primary-600 hover:underline ml-1">
               {t('cookies.learnMore')}
             </a>
           </p>
@@ -39,7 +39,7 @@ const CookieConsent: React.FC = () => {
         <div className="flex gap-2 sm:gap-3 w-full sm:w-auto">
           <button
             onClick={acceptCookies}
-            className="flex-1 sm:flex-none px-4 py-2 bg-pink-600 text-white font-medium rounded-md hover:bg-pink-700 transition-colors"
+            className="flex-1 sm:flex-none px-4 py-2 bg-primary-600 text-white font-medium rounded-md hover:bg-primary-700 transition-colors"
           >
             {t('cookies.accept')}
           </button>

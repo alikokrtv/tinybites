@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
           alt="Renklerle Yemek Saatini Eğlenceli Hale Getirmek" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/70 to-blue-500/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-500/70 to-secondary-500/70"></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
           <AnimatedSection animation="fade-up" delay={600}>
             <Link 
               to="/products" 
-              className="bg-white text-pink-600 hover:bg-pink-100 px-8 py-3 rounded-full font-medium text-lg inline-block transition-colors duration-300"
+              className="bg-white text-primary-600 hover:bg-secondary-100 px-8 py-3 rounded-full font-medium text-lg inline-block transition-colors duration-300"
             >
               {t('home.hero.cta')}
             </Link>

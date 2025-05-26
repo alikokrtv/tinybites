@@ -21,7 +21,7 @@ const ProductDetailPage: React.FC = () => {
           </h1>
           <Link 
             to="/products" 
-            className="inline-flex items-center text-pink-600 hover:text-pink-700"
+            className="inline-flex items-center text-primary-600 hover:text-primary-700"
           >
             {language === 'tr' ? 'Tüm ürünlere dön' : 'Back to all products'}
           </Link>
@@ -41,15 +41,15 @@ const ProductDetailPage: React.FC = () => {
         {/* Breadcrumb */}
         <div className="mb-8">
           <div className="flex items-center text-sm text-gray-500">
-            <Link to="/" className="hover:text-pink-600">
+            <Link to="/" className="hover:text-primary-600">
               {language === 'tr' ? 'Ana Sayfa' : 'Home'}
             </Link>
             <ChevronRight size={16} className="mx-2" />
-            <Link to="/products" className="hover:text-pink-600">
+            <Link to="/products" className="hover:text-primary-600">
               {language === 'tr' ? 'Ürünler' : 'Products'}
             </Link>
             <ChevronRight size={16} className="mx-2" />
-            <Link to={`/products/${product.categoryId}`} className="hover:text-pink-600">
+            <Link to={`/products/${product.categoryId}`} className="hover:text-primary-600">
               {product.category}
             </Link>
             <ChevronRight size={16} className="mx-2" />
@@ -60,7 +60,7 @@ const ProductDetailPage: React.FC = () => {
           <div className="mt-4">
             <Link 
               to="/products" 
-              className="inline-flex items-center px-4 py-2 bg-pink-100 text-pink-700 rounded-md hover:bg-pink-200 transition-colors"
+              className="inline-flex items-center px-4 py-2 bg-primary-100 text-primary-700 rounded-md hover:bg-primary-200 transition-colors"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -95,7 +95,7 @@ const ProductDetailPage: React.FC = () => {
                       key={index}
                       onClick={() => setActiveImage(index)}
                       className={`aspect-square border-2 rounded overflow-hidden ${
-                        activeImage === index ? 'border-pink-500' : 'border-transparent'
+                        activeImage === index ? 'border-primary-500' : 'border-transparent'
                       }`}
                     >
                       <img 
@@ -126,7 +126,7 @@ const ProductDetailPage: React.FC = () => {
                   {product.name}
                 </h1>
                 {product.price && (
-                  <div className="mt-3 text-2xl font-semibold text-pink-600">
+                  <div className="mt-3 text-2xl font-semibold text-primary-600">
                     {product.price}
                   </div>
                 )}
@@ -143,7 +143,7 @@ const ProductDetailPage: React.FC = () => {
                       <button 
                         key={index}
                         onClick={() => setActiveImage(Math.min(index, images.length - 1))}
-                        className={`flex items-center px-3 py-1 rounded-full border ${activeImage === index ? 'border-pink-500 bg-pink-50' : 'border-gray-200'}`}
+                        className={`flex items-center px-3 py-1 rounded-full border ${activeImage === index ? 'border-primary-500 bg-primary-50' : 'border-gray-200'}`}
                       >
                         {variant.color && (
                           <div 
@@ -205,7 +205,7 @@ const ProductDetailPage: React.FC = () => {
               <div className="pt-6">
                 <Link
                   to="/contact"
-                  className="inline-block bg-pink-600 text-white px-8 py-3 rounded-md hover:bg-pink-700 transition-colors"
+                  className="inline-block bg-primary-600 text-white px-8 py-3 rounded-md hover:bg-primary-700 transition-colors"
                 >
                   {language === 'tr' ? 'İletişime Geç' : 'Contact Us'}
                 </Link>
@@ -237,7 +237,7 @@ const ProductDetailPage: React.FC = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="text-sm font-medium text-gray-800 group-hover:text-pink-600">
+                  <h3 className="text-sm font-medium text-gray-800 group-hover:text-primary-600">
                     {relatedProduct.name}
                   </h3>
                 </Link>
