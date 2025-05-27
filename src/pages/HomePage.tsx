@@ -4,11 +4,10 @@ import { useLanguage } from '../contexts/LanguageContext';
 import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import ProductCard from '../components/ProductCard';
-import ProductSlider from '../components/ProductSlider';
-import { featuredProducts, allProducts } from '../data/products';
+import { featuredProducts } from '../data/products';
 
 const HomePage: React.FC = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   
   return (
     <div className="pt-20">
@@ -24,35 +23,7 @@ const HomePage: React.FC = () => {
             <div className="h-1 w-20 bg-primary-500"></div>
           </AnimatedSection>
           
-          <div className="flex flex-col gap-12">
-            <AnimatedSection animation="fade-up" className="w-full">
-              <div className="relative h-96 md:h-[400px] max-w-4xl mx-auto">
-                {/* First Image - Main image */}
-                <div className="absolute top-0 left-0 z-10 w-4/5 h-4/5 rounded-xl overflow-hidden shadow-2xl hover:z-30 transform hover:scale-105 transition-all duration-500 hover:shadow-xl">
-                  <img 
-                    src="/images/tiny-bites/elephant-tableware-1.jpg" 
-                    alt="Elephant tableware for kids" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-500/30 to-transparent"></div>
-                </div>
-                
-                {/* Second Image - Diagonal overlap */}
-                <div className="absolute bottom-0 right-0 z-0 w-3/4 h-3/5 rounded-xl overflow-hidden shadow-2xl hover:z-30 transform hover:scale-105 transition-all duration-500 hover:shadow-xl">
-                  <img 
-                    src="/images/tiny-bites/LV-112.jpg" 
-                    alt="Colorful tableware collection" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary-500/30 to-transparent"></div>
-                </div>
-                
-                {/* Decorative elements */}
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary-100 rounded-full z-0"></div>
-                <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-secondary-200 rounded-full z-0 opacity-70"></div>
-              </div>
-            </AnimatedSection>
-            
+          <div className="flex flex-col gap-8">
             <AnimatedSection animation="fade-in" className="max-w-4xl mx-auto">
               <div className="prose prose-lg max-w-none">
                 {t('home.story.content').split('\n').map((paragraph, index) => (
@@ -60,15 +31,6 @@ const HomePage: React.FC = () => {
                     {paragraph}
                   </p>
                 ))}
-              </div>
-              
-              <div className="text-center mt-8">
-                <Link 
-                  to="/about" 
-                  className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-full font-medium inline-block transition-colors duration-300"
-                >
-                  {t('home.about.button')}
-                </Link>
               </div>
             </AnimatedSection>
           </div>
@@ -172,13 +134,7 @@ const HomePage: React.FC = () => {
       
 
       
-      {/* Product Slider */}
-      <section className="py-12 bg-primary-50">
-        <ProductSlider 
-          products={allProducts.filter(p => p.categoryId === 'tableware')} 
-          title={language === 'tr' ? 'Renklerle Yemek Saatini Eğlenceli Hale Getirmek' : 'Make Mealtime Fun with Colors'} 
-        />
-      </section>
+
 
       {/* Color Blocks */}
       <section className="py-16 bg-white">
@@ -227,13 +183,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       
-      {/* Storage Boxes Slider */}
-      <section className="py-12 bg-secondary-50">
-        <ProductSlider 
-          products={allProducts.filter(p => p.categoryId === 'storageBoxes')} 
-          title={language === 'tr' ? 'Şık ve Düzenli Saklama Kutuları' : 'Stylish Storage Solutions'} 
-        />
-      </section>
+
     </div>
   );
 };

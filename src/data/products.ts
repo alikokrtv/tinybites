@@ -8,6 +8,117 @@ const BASKETS_PATH = '/images/baskets/';
 export const allProducts: Product[] = [
   // Tableware
   {
+    id: 'tb-lv111',
+    name: 'YOGI Food Plate and Spoon-Fork Set',
+    category: 'Tableware',
+    categoryId: 'tableware',
+    image: `${TINY_BITES_PATH}lv-111-yogi.jpg`,
+    galleryImages: [
+      `${TINY_BITES_PATH}lv-111-yogi.jpg`,
+    ],
+    colors: ['#4D7C4E', '#F4C145', '#8D5B8A'],
+    featured: true,
+    code: 'LV-111',
+    description: {
+      en: 'Yogi Food Plate makes eating fun for your kids. The bear-shaped plate with matching spoon and fork turns mealtime into an enjoyable experience for children.',
+      tr: 'Yogi mama tabağı, yemek yemeyi çocuklarınız için eğlenceli hale getiriyor. Kaşık ve çatal ile eşleşen ayı şeklindeki tabak, yemek saatini çocuklar için keyifli bir deneyime dönüştürür.'
+    },
+    specifications: {
+      en: [
+        'Bear-shaped design with 3 compartments',
+        'Comes with matching bear-handled utensils',
+        'Made from food-safe BPA-free materials',
+        'Dishwasher safe',
+        'Microwave safe (except utensils)',
+        'Available in 3 colors: green, yellow, and purple',
+        '36 pieces per box'
+      ],
+      tr: [
+        'Ayı şeklinde tasarım, 3 bölmeli',
+        'Ayı şeklinde saplı uyumlu çatal-kaşık ile birlikte',
+        'Gıda güvenliği olan BPA içermeyen malzemelerden üretilmiştir',
+        'Bulaşık makinesinde yıkanabilir',
+        'Mikrodalga fırında kullanılabilir (çatal-kaşık hariç)',
+        'Yeşil, sarı ve mor olmak üzere 3 renk seçeneği',
+        'Kutuda 36 adet'
+      ]
+    }
+  },
+  {
+    id: 'tb-lv112',
+    name: 'YOGI Food Table with 4 Compartments',
+    category: 'Tableware',
+    categoryId: 'tableware',
+    image: `${TINY_BITES_PATH}lv-112-yogi-table.jpg`,
+    galleryImages: [
+      `${TINY_BITES_PATH}lv-112-yogi-table.jpg`,
+    ],
+    colors: ['#4D7C4E', '#F4C145', '#8D5B8A'],
+    featured: true,
+    code: 'LV-112',
+    description: {
+      en: 'Yogi Food Plate makes eating fun for your kids. The bear-shaped plate with 4 separate compartments helps children enjoy a variety of foods in an organized way.',
+      tr: 'Yogi mama tabağı, yemek yemeyi çocuklarınız için eğlenceli hale getiriyor. 4 ayrı bölmeli ayı şeklindeki tabak, çocukların çeşitli yiyecekleri düzenli bir şekilde yemelerine yardımcı olur.'
+    },
+    specifications: {
+      en: [
+        'Bear-shaped design with 4 compartments',
+        'Made from food-safe BPA-free materials',
+        'Dishwasher safe',
+        'Microwave safe',
+        'Perfect for serving multiple foods without mixing',
+        'Available in multiple colors',
+        '24 pieces per box'
+      ],
+      tr: [
+        'Ayı şeklinde tasarım, 4 bölmeli',
+        'Gıda güvenliği olan BPA içermeyen malzemelerden üretilmiştir',
+        'Bulaşık makinesinde yıkanabilir',
+        'Mikrodalga fırında kullanılabilir',
+        'Yiyecekleri karıştırmadan servis etmek için mükemmel',
+        'Birden fazla renk seçeneği mevcut',
+        'Kutuda 24 adet'
+      ]
+    }
+  },
+  {
+    id: 'tb-lv108',
+    name: 'CAR Kids Food Plate',
+    category: 'Tableware',
+    categoryId: 'tableware',
+    image: `${TINY_BITES_PATH}lv-108-car.jpg`,
+    galleryImages: [
+      `${TINY_BITES_PATH}lv-108-car.jpg`,
+    ],
+    colors: ['#89CFF0', '#FFB6C1'],
+    featured: true,
+    code: 'LV-108',
+    description: {
+      en: 'Kids Food Plate makes eating fun for your kids. The car-shaped plate with multiple compartments transforms mealtime into an exciting journey.',
+      tr: 'Araba mama tabağı, yemek yemeyi çocuklarınız için eğlenceli hale getiriyor. Birden fazla bölmeli araba şeklindeki tabak, yemek saatini heyecan verici bir yolculuğa dönüştürür.'
+    },
+    specifications: {
+      en: [
+        'Car-shaped design with multiple compartments',
+        'Made from food-safe BPA-free materials',
+        'Dishwasher safe',
+        'Microwave safe',
+        'Available in blue and pink colors',
+        'Perfect for picky eaters',
+        '48 pieces per box'
+      ],
+      tr: [
+        'Araba şeklinde tasarım, çoklu bölmeli',
+        'Gıda güvenliği olan BPA içermeyen malzemelerden üretilmiştir',
+        'Bulaşık makinesinde yıkanabilir',
+        'Mikrodalga fırında kullanılabilir',
+        'Mavi ve pembe renk seçenekleri mevcut',
+        'Seçici yemek yiyenler için mükemmel',
+        'Kutuda 48 adet'
+      ]
+    }
+  },
+  {
     id: '1',
     name: 'Elephant Tableware - Pink',
     category: 'Tableware',
@@ -145,6 +256,114 @@ export const allProducts: Product[] = [
   },
   
   // Storage Boxes
+  {
+    id: 'sb-lv295',
+    name: 'HERBORN Spice Organizer',
+    category: 'Storage Boxes',
+    categoryId: 'storageBoxes',
+    image: `${STORAGE_BOXES_PATH}lv-295-herborn.jpg`,
+    galleryImages: [
+      `${STORAGE_BOXES_PATH}lv-295-herborn.jpg`,
+    ],
+    colors: ['#FFFFFF', '#F5F5DC'],
+    code: 'LV-295',
+    description: {
+      en: 'The Herborn spice rack has four separate sections and spoons that can be separated individually. You can easily carry your spices wherever you want at the same time.',
+      tr: 'Herborn baharatlık, tek tek ayrılabilen dört ayrı bölüme ve kaşıklara sahiptir. Baharatlarınızı aynı anda istediğiniz yere kolayca taşıyabilirsiniz.'
+    },
+    specifications: {
+      en: [
+        'Four separate compartments for different spices',
+        'Includes 4 matching spoons',
+        'Compact and portable design',
+        'BPA-free food-safe materials',
+        'Easy to clean',
+        'Perfect for kitchen organization',
+        '12 pieces per box'
+      ],
+      tr: [
+        'Farklı baharatlar için dört ayrı bölme',
+        '4 adet uyumlu kaşık içerir',
+        'Kompakt ve taşınabilir tasarım',
+        'BPA içermeyen gıda güvenliği olan malzemeler',
+        'Kolayca temizlenebilir',
+        'Mutfak organizasyonu için mükemmel',
+        'Kutuda 12 adet'
+      ]
+    }
+  },
+  {
+    id: 'sb-lv254',
+    name: 'Compartment Storage Box',
+    category: 'Storage Boxes',
+    categoryId: 'storageBoxes',
+    image: `${STORAGE_BOXES_PATH}lv-254-storage.jpg`,
+    galleryImages: [
+      `${STORAGE_BOXES_PATH}lv-254-storage.jpg`,
+    ],
+    colors: ['#4682B4', '#C08081', '#F0E68C', '#D3D3D3'],
+    code: 'LV-254',
+    description: {
+      en: 'With the compartmented storage boxes, you can carry or store your foods anywhere you want by putting them in separate compartments.',
+      tr: 'Bölmeli saklama kabı ile yiyeceklerinizi ayrı bölmelere koyarak istediğiniz yere taşıyabilir veya saklayabilirsiniz.'
+    },
+    specifications: {
+      en: [
+        'Available in multiple vibrant colors',
+        '900 ml capacity',
+        'Airtight seal to keep food fresh',
+        'Microwave safe (without lid)',
+        'Dishwasher safe',
+        'Stackable design for easy storage',
+        '24 pieces per box'
+      ],
+      tr: [
+        'Birden fazla canlı renk seçeneği mevcut',
+        '900 ml kapasite',
+        'Yiyecekleri taze tutmak için hava geçirmez kapak',
+        'Mikrodalga fırında kullanılabilir (kapaksız)',
+        'Bulaşık makinesinde yıkanabilir',
+        'Kolay depolama için istifleme tasarımı',
+        'Kutuda 24 adet'
+      ]
+    }
+  },
+  {
+    id: 'sb-lv104',
+    name: 'MACARON Storage Box',
+    category: 'Storage Boxes',
+    categoryId: 'storageBoxes',
+    image: `${STORAGE_BOXES_PATH}lv-104-macaron.jpg`,
+    galleryImages: [
+      `${STORAGE_BOXES_PATH}lv-104-macaron.jpg`,
+    ],
+    colors: ['#FF69B4', '#90EE90', '#F0E68C', '#FFA500'],
+    code: 'LV-104',
+    description: {
+      en: 'Enjoy taking your food everywhere you want with the Macaron Storage Container. You can also use it for your child\'s lunchbox.',
+      tr: 'Makaron saklama kabı ile yiyeceklerinizi istediğiniz yere taşıyabilme keyfini yaşayın. Çocuğunuzun beslenme çantası için de kullanabilirsiniz.'
+    },
+    specifications: {
+      en: [
+        'Cute macaron-shaped design',
+        '400 ml capacity',
+        'Available in pink, green, yellow, and orange',
+        'Secure snap-lock closure',
+        'Dishwasher safe',
+        'Perfect for snacks, small meals or accessories',
+        '72 pieces per box'
+      ],
+      tr: [
+        'Sevimli makaron şeklinde tasarım',
+        '400 ml kapasite',
+        'Pembe, yeşil, sarı ve turuncu renklerde mevcut',
+        'Güvenli mandallı kapak',
+        'Bulaşık makinesinde yıkanabilir',
+        'Atıştırmalıklar, küçük yemekler veya aksesuarlar için mükemmel',
+        'Kutuda 72 adet'
+      ]
+    }
+  },
   {
     id: '5',
     name: 'Shell Storage Boxes Set',

@@ -117,11 +117,7 @@ const ProductDetailPage: React.FC = () => {
           <AnimatedSection animation="slide-in-right">
             <div className="space-y-6">
               <div>
-                {product.code && (
-                  <p className="text-sm text-gray-500 mb-1">
-                    {language === 'tr' ? 'Ürün Kodu:' : 'Product Code:'} {product.code}
-                  </p>
-                )}
+                {/* Ürün kodu gizlendi */}
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
                   {product.name}
                 </h1>

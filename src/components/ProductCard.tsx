@@ -28,7 +28,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className={`absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end`}>
           <div className="p-4 w-full">
             <div className="flex gap-2 mb-2">
-              {product.colors.map((color, index) => (
+              {product.colors?.map((color, index) => (
                 <div 
                   key={index}
                   className="w-4 h-4 rounded-full" 

@@ -22,8 +22,14 @@ export const translations = {
     'home.about.title': 'Our Story',
     'home.about.description': 'Tiny Bites creates colorful, fun, and safe tableware designed specifically for children, making mealtime an adventure they look forward to.',
     'home.about.button': 'Learn More',
+    'home.story.content': 'At Tiny Bites, we understand how challenging mealtimes can be for babies and young children. Every day, the eating habits and meal times of little ones can sometimes turn into a struggle for both them and their families. That\'s where we come in.\nOur founding purpose was to make children\'s mealtimes more enjoyable, fun, and easy. The plastic food plates and containers we designed for babies and small children are designed to make meals not only nutritious but also fun. Each of our products is made from materials that do not harm children\'s health, prioritizing ease of use and safety.\nAs Tiny Bites, we want every child\'s mealtime to remain a happy memory for parents as well. That\'s why we take care to offer products that are not only aesthetic but also functional. We aim to provide a closer, more fun, and healthier experience for your children at every meal.\nIn this journey we embarked on to make you and your little ones happy, we continue to grow without compromising our reliability and quality.\nAt the same time, with our Loren Plastic brand, we combine functionality and aesthetics.\nOur product range, from food storage containers to decorative baskets, is designed to add elegance and order to modern living spaces.\nAs the Loren Plastic family, with these two brands appealing to different age groups and lifestyles, we experience the happiness of taking our place in every home.',
     
     // Products
+    'products.explore.title': 'Explore Products',
+    'products.tiny-bites.title': 'Tiny Bites Collection',
+    'products.tiny-bites.description': 'Products specially designed for babies and children',
+    'products.loren-plastic.title': 'Loren Plastic Collection',
+    'products.loren-plastic.description': 'Storage Containers and Baskets',
     'products.title': 'Our Products',
     'products.subtitle': 'Discover our colorful collection',
     'products.tableware': 'Tableware',
@@ -95,9 +101,9 @@ export const translations = {
     
     // Home
     'home.hero.title': 'Tiny Bites',
-    'home.hero.subtitle': 'Minikler icin sofra ürünleri',
-    'home.hero.slogan': 'tummy flies',
-    'home.hero.description': 'Miniklerimiz icin yemek saatlerini eglenceli ve keyifli hale getiren sofra ürünleri',
+    'home.hero.subtitle': 'Minikler için sağlıklı ve eğlenceli sofra ürünleri',
+    'home.hero.slogan': 'Tummy Flies',
+    'home.hero.description': 'BPA içermeyen, renkli ve pratik tasarımlarımızla, minikler için yemek saatlerini keyifli ve güvenli hale getiriyoruz.',
     'home.hero.cta': 'Ürünleri Keşfet',
     'home.featured.title': 'Öne Çıkan Ürünler',
     'home.featured.viewAll': 'Tüm Ürünleri Gör',
@@ -107,7 +113,7 @@ export const translations = {
     'home.about.button': 'Daha Fazla',
     
     // Products
-    'products.explore.title': 'Ürünleri Kesfet',
+    'products.explore.title': 'Ürünleri Keşfet',
     'products.tiny-bites.title': 'Tiny Bites Koleksiyonu',
     'products.tiny-bites.description': 'Bebek ve çocuklar için özel olarak tasarlanmış ürünler',
     'products.loren-plastic.title': 'Loren Plastic Koleksiyonu',

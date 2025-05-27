@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 import { translations } from '../data/translations';
 
 export type Language = 'tr' | 'en';
@@ -28,12 +28,34 @@ interface LanguageProviderProps {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('tr');
+  
+  useEffect(() => {
+    // On mount or language change, log available translations
+    console.log('Current language:', language);
+    console.log('Available translation keys:', Object.keys(translations[language] || {}).length);
+  }, [language]);
 
   const t = (key: TranslationKey): string => {
-    // Using type assertion to handle dynamic keys
-    return (translations[language] as Record<string, string>)[key] || 
-           (translations.en as Record<string, string>)[key] || 
-           key;
+    try {
+      // Direct access to current language translations
+      const currentLangTranslations = translations[language] as Record<string, string>;
+      if (currentLangTranslations && typeof currentLangTranslations[key] === 'string') {
+        return currentLangTranslations[key];
+      }
+      
+      // Fallback to English
+      const englishTranslations = translations.en as Record<string, string>;
+      if (englishTranslations && typeof englishTranslations[key] === 'string') {
+        return englishTranslations[key];
+      }
+      
+      // Log missing translation
+      console.warn(`Translation missing for key: "${key}" in language: ${language}`);
+      return key; // Return key as fallback
+    } catch (error) {
+      console.error('Translation error:', error);
+      return key; // Return key as fallback in case of any error
+    }
   };
 
   return (

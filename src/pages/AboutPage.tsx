@@ -5,19 +5,7 @@ import AnimatedSection from '../components/AnimatedSection';
 const AboutPage: React.FC = () => {
   const { t } = useLanguage();
   
-  // Story content in both languages
-  const storyContent = {
-    en: {
-      paragraph1: "Tiny Bites was born from a simple idea: mealtime should be fun, safe, and colorful for children. Our founder, a parent of two young children, was frustrated with the limited options for children's tableware that were both functional and appealing to kids.",
-      paragraph2: "We started designing our own line of tableware that combines playful designs with practical features that make parents' lives easier. From there, we expanded into storage solutions and baskets, all designed with children in mind.",
-      paragraph3: "Today, Tiny Bites is loved by families around the world who share our belief that everyday items for children can be both beautiful and practical."
-    },
-    tr: {
-      paragraph1: "Tiny Bites basit bir fikirden doğdu: yemek zamanı çocuklar için eğlenceli, güvenli ve renkli olmalıdır. Kurucumuz, iki küçük çocuğun ebeveyni, hem işlevsel hem de çocuklar için çekici olan çocuk sofra takımı seçeneklerinin sınırlı olmasından dolayı hayal kırıklığına uğradı.",
-      paragraph2: "Eğlenceli tasarımları, ebeveynlerin hayatını kolaylaştıran pratik özelliklerle birleştiren kendi sofra takımı serimizi tasarlamaya başladık. Oradan, hepsi çocuklar düşünülerek tasarlanmış depolama çözümleri ve sepetlere genişledik.",
-      paragraph3: "Bugün, Tiny Bites, çocuklar için günlük eşyaların hem güzel hem de pratik olabileceği inancımızı paylaşan dünyanın dört bir yanındaki aileler tarafından sevilmektedir."
-    }
-  };
+  // Use the same story content as the homepage
   
   const values = [
     {
@@ -116,15 +104,13 @@ const AboutPage: React.FC = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
               {t('language') === 'tr' ? 'Hikayemiz' : 'Our Story'}
             </h2>
-            <p className="text-gray-600 mb-4 leading-relaxed">
-              {storyContent[t('language') === 'tr' ? 'tr' : 'en'].paragraph1}
-            </p>
-            <p className="text-gray-600 mb-4 leading-relaxed">
-              {storyContent[t('language') === 'tr' ? 'tr' : 'en'].paragraph2}
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              {storyContent[t('language') === 'tr' ? 'tr' : 'en'].paragraph3}
-            </p>
+            <div className="prose prose-lg max-w-none">
+              {t('home.story.content').split('\n').map((paragraph, index) => (
+                <p key={index} className="text-gray-600 mb-4 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </AnimatedSection>
         </div>
         
@@ -172,7 +158,7 @@ const AboutPage: React.FC = () => {
             <div className="h-1 w-20 bg-primary-500 mx-auto"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
             {values.map((value, index) => (
               <AnimatedSection 
                 key={value.id} 
@@ -196,28 +182,7 @@ const AboutPage: React.FC = () => {
           </div>
         </AnimatedSection>
         
-        {/* Team Photo */}
-        <AnimatedSection animation="fade-up" className="mt-16">
-          <div className="relative">
-            <img 
-              src="/images/storage-boxes/lv-237-shell.jpg" 
-              alt="Our products" 
-              className="rounded-lg shadow-xl w-full h-auto object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-              <div className="text-white p-6 md:p-12">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                  {t('language') === 'tr' ? 'Ekibimiz' : 'Our Team'}
-                </h3>
-                <p className="text-white/90 max-w-lg">
-                  {t('language') === 'tr' 
-                    ? 'Her yerde ailelere mutluluk getiren ürünler yaratmaya kendini adamış, tasarımcılar ve ebeveynlerden oluşan özel bir ekip.' 
-                    : 'A dedicated group of designers and parents committed to creating products that bring joy to families everywhere.'}
-                </p>
-              </div>
-            </div>
-          </div>
-        </AnimatedSection>
+
       </div>
     </div>
   );

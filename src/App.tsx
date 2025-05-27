@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
 import WhatsAppButton from './components/WhatsAppButton';
+import ChatBot from './components/ChatBot';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import AboutPage from './pages/AboutPage';
@@ -55,6 +56,7 @@ function App() {
             <Footer />
             <CookieConsent />
             <WhatsAppButton phoneNumber="+90 507 772 13 93" />
+            <ChatBot />
           </div>
         </Router>
       </AnimationProvider>
