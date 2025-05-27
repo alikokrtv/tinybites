@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, ChangeEvent } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { MessageSquare, Send, X } from 'lucide-react';
 
@@ -22,6 +22,7 @@ const ChatBot: React.FC = () => {
   const [showError, setShowError] = useState(false);
   const [isWaving, setIsWaving] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
+  const [lastLanguage, setLastLanguage] = useState(language); // Track language changes
   const messagesEndRef = useRef<HTMLDivElement>(null);
   
   // Translations
@@ -102,38 +103,77 @@ const ChatBot: React.FC = () => {
     return () => clearInterval(waveInterval);
   }, [hasInteracted]);
   
-  // Set initial message and options
+  // Detect language changes and update UI accordingly
+  useEffect(() => {
+    if (language !== lastLanguage) {
+      // Language has changed, update all messages and options
+      setLastLanguage(language);
+      
+      if (messages.length > 0) {
+        // Create fresh translations of all bot messages
+        const updatedMessages = messages.map((msg: Message) => {
+          if (msg.sender === 'user') {
+            return msg; // Keep user messages unchanged
+          }
+          
+          // Try to identify message type and retranslate
+          if (msg.text.includes(translations.welcome.en) || msg.text.includes(translations.welcome.tr)) {
+            return { ...msg, text: t('welcome') };
+          } else if (msg.text.includes(translations.options.en) || msg.text.includes(translations.options.tr)) {
+            return { ...msg, text: t('options') };
+          } else if (msg.text.includes(translations.products.en + ':') || msg.text.includes(translations.products.tr + ':')) {
+            return { ...msg, text: `${t('products')}:` };
+          } 
+          // Keep other bot messages unchanged for now
+          return msg;
+        });
+        
+        setMessages(updatedMessages);
+      }
+      
+      // Reset and update all options
+      resetMainOptions();
+    }
+  }, [language]);
+  
+  // Set initial message and options when chat opens
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      setMessages([
+      setMessages((prev: Message[]) => [
+        ...prev, 
         { sender: 'bot', text: t('welcome') },
-        { sender: 'bot', text: t('options') }
+        { sender: 'bot', text: t('options') },
       ]);
       
-      setCurrentOptions([
-        { 
-          id: 1, 
-          text: t('products'), 
-          action: () => handleProductsOption() 
-        },
-        { 
-          id: 2, 
-          text: t('contact'), 
-          action: () => handleContactOption() 
-        },
-        { 
-          id: 3, 
-          text: t('about'), 
-          action: () => handleAboutOption() 
-        },
-        { 
-          id: 4, 
-          text: t('catalog'), 
-          action: () => handleCatalogOption() 
-        }
-      ]);
+      resetMainOptions();
     }
-  }, [isOpen, language]);
+  }, [isOpen]);
+  
+  // Function to reset to main options menu
+  const resetMainOptions = () => {
+    setCurrentOptions([
+      { 
+        id: 1, 
+        text: t('products'), 
+        action: () => handleProductsOption() 
+      },
+      { 
+        id: 2, 
+        text: t('contact'), 
+        action: () => handleContactOption() 
+      },
+      { 
+        id: 3, 
+        text: t('about'), 
+        action: () => handleAboutOption() 
+      },
+      { 
+        id: 4, 
+        text: t('catalog'), 
+        action: () => handleCatalogOption() 
+      }
+    ]);
+  };
   
   // Scroll to bottom when messages update
   useEffect(() => {
@@ -146,18 +186,18 @@ const ChatBot: React.FC = () => {
     setIsWaving(false);
   };
   
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
     setShowError(false);
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (!inputValue.trim()) return;
     
     const userInput = inputValue.trim();
-    setMessages([...messages, { sender: 'user', text: userInput }]);
+    setMessages((prev: Message[]) => [...prev, { sender: 'user', text: userInput }]);
     setInputValue('');
     
     // Process user input
@@ -165,7 +205,7 @@ const ChatBot: React.FC = () => {
     
     if (isNaN(selectedOption) || selectedOption < 1 || selectedOption > currentOptions.length) {
       setTimeout(() => {
-        setMessages(prev => [...prev, { 
+        setMessages((prev: Message[]) => [...prev, { 
           sender: 'bot', 
           text: t('error')
         }]);
@@ -182,28 +222,25 @@ const ChatBot: React.FC = () => {
       }, 500);
     }
   };
-  
+
   // Option handlers
   const handleProductsOption = () => {
-    setMessages(prev => [...prev, { 
-      sender: 'bot', 
-      text: `${t('products')}:` 
-    }]);
-    
+    setMessages((prev: Message[]) => [...prev, { sender: 'bot', text: `${t('products')}:` }]);
+
     setCurrentOptions([
-      { 
-        id: 1, 
-        text: t('tableware'), 
+      {
+        id: 1,
+        text: t('tableware'),
         action: () => {
           window.location.href = '/products/tableware';
-        } 
+        }
       },
-      { 
-        id: 2, 
-        text: t('containers'), 
+      {
+        id: 2,
+        text: t('containers'),
         action: () => {
           window.location.href = '/products/containers';
-        } 
+        }
       },
       { 
         id: 3, 
@@ -211,6 +248,11 @@ const ChatBot: React.FC = () => {
         action: () => {
           window.location.href = '/products/baskets';
         } 
+      },
+      {
+        id: 4,
+        text: language === 'tr' ? 'Ana Menü' : 'Main Menu',
+        action: () => resetMainOptions()
       }
     ]);
   };
@@ -267,7 +309,7 @@ const ChatBot: React.FC = () => {
           
           {/* Chat messages */}
           <div className="p-4 h-80 overflow-y-auto bg-gray-50">
-            {messages.map((message, index) => (
+            {messages.map((message: Message, index: number) => (
               <div 
                 key={index} 
                 className={`mb-3 ${message.sender === 'bot' ? 'text-left' : 'text-right'}`}
@@ -289,7 +331,7 @@ const ChatBot: React.FC = () => {
               <div className="mb-3 text-left">
                 <div className="inline-block rounded-lg px-4 py-2 bg-gray-100 text-gray-800 max-w-[85%]">
                   <ul className="space-y-1">
-                    {currentOptions.map(option => (
+                    {currentOptions.map((option: Option) => (
                       <li key={option.id}>
                         <span className="font-bold">{option.id}.</span> {option.text}
                       </li>

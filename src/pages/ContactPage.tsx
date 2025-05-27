@@ -7,16 +7,38 @@ const ContactPage: React.FC = () => {
   const { t } = useLanguage();
   const [formSubmitted, setFormSubmitted] = useState(false);
   
-  const handleSubmit = () => {
-    // Form will be submitted normally, but we'll show a success message
-    setTimeout(() => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent default form submission
+    
+    // Get form data
+    const formData = new FormData(e.target as HTMLFormElement);
+    const formObject = Object.fromEntries(formData.entries());
+    
+    // Submit form via fetch API
+    fetch('https://formsubmit.co/info@tinybites.net', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(formObject)
+    })
+    .then(response => {
+      console.log('Form submitted successfully');
       setFormSubmitted(true);
       
-      // Reset form success message after 5 seconds
+      // Reset form
+      (e.target as HTMLFormElement).reset();
+      
+      // Keep success message visible for 10 seconds
       setTimeout(() => {
         setFormSubmitted(false);
-      }, 5000);
-    }, 500);
+      }, 10000);
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error);
+      alert(error.message || 'An error occurred while submitting the form. Please try again.');
+    });
   };
   
   return (
@@ -44,11 +66,8 @@ const ContactPage: React.FC = () => {
                   <p className="mt-2">{t('language') === 'tr' ? 'En kısa sürede size geri dönüş yapacağız.' : 'We will get back to you as soon as possible.'}</p>
                 </div>
               ) : (
-                <form 
-                  action="https://formsubmit.co/info@tinybites.net" 
-                  method="POST"
-                  onSubmit={handleSubmit}
-                >
+                <form onSubmit={handleSubmit}>
+
                   {/* FormSubmit.co settings */}
                   <input type="hidden" name="_subject" value="Tiny Bites Website Contact Form" />
                   <input type="hidden" name="_template" value="table" />
@@ -117,8 +136,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold text-xl mb-2">{t('contact.info.address')}</h3>
                     <p className="text-white/90">
-                      Kadıköy<br />
-                      Istanbul, Turkey 34710
+                      Muratpaşa Mah. Demirhisar Cad.<br />
+                      No:3/22 Bayrampaşa / ISTANBUL
                     </p>
                   </div>
                 </div>
@@ -127,7 +146,7 @@ const ContactPage: React.FC = () => {
                   <Phone className="mr-4 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-xl mb-2">{t('contact.info.phone')}</h3>
-                    <p className="text-white/90">+90 212 555 1234</p>
+                    <p className="text-white/90">+90 507 772 13 93</p>
                   </div>
                 </div>
                 

@@ -1,6 +1,6 @@
 // React is used implicitly by JSX
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -18,16 +18,29 @@ import KVKKPage from './pages/KVKKPage';
 import CatalogPage from './pages/CatalogPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import AnimationProvider from './contexts/AnimationProvider';
+import LoadingIndicator from './components/LoadingIndicator';
 
-// This component will scroll to top when route changes
+// This component will scroll to top when route changes and show loading indicator
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
+  const [isLoading, setIsLoading] = useState(false);
   
   useEffect(() => {
+    // Show loading indicator when navigation happens
+    setIsLoading(true);
+    
+    // Scroll to top
     window.scrollTo(0, 0);
+    
+    // Hide loading indicator after a short delay
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500); // Show for at least 500ms so it's visible
+    
+    return () => clearTimeout(timer);
   }, [pathname]);
   
-  return null;
+  return <LoadingIndicator isVisible={isLoading} />;
 };
 
 function App() {
