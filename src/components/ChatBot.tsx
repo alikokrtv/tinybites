@@ -80,34 +80,10 @@ const ChatBot: React.FC = () => {
     return translations[key][language === 'tr' ? 'tr' : 'en'];
   };
   
-  // Function to play notification sound
+  // Function to play notification sound - disabled
   const playNotificationSound = () => {
-    try {
-      // Create an AudioContext
-      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-      
-      // Create an oscillator (sound generator)
-      const oscillator = audioContext.createOscillator();
-      const gainNode = audioContext.createGain();
-      
-      // Connect oscillator to gain node and gain node to destination
-      oscillator.connect(gainNode);
-      gainNode.connect(audioContext.destination);
-      
-      // Set type and frequency for a pleasant "ding" sound
-      oscillator.type = 'sine';
-      oscillator.frequency.setValueAtTime(880, audioContext.currentTime); // A5 note
-      
-      // Set volume
-      gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-      
-      // Start and stop the sound
-      oscillator.start();
-      oscillator.stop(audioContext.currentTime + 0.5);
-    } catch (error) {
-      console.log('Sound generation failed:', error);
-    }
+    // Sound functionality disabled as requested
+    return;
   };
   
   // Start waving animation and play sound at intervals
@@ -252,8 +228,8 @@ const ChatBot: React.FC = () => {
   };
   
   return (
-    <div className="fixed bottom-6 left-6 z-50">
-      {/* Chatbot toggle button */}
+    <div className="fixed bottom-16 left-6 z-50">
+      {/* Chat button */}
       <button 
         onClick={toggleChat}
         className={`flex items-center justify-center w-14 h-14 rounded-full bg-primary-600 text-white shadow-lg hover:bg-primary-700 transition-all duration-300 ${isWaving ? 'animate-bounce' : ''}`}

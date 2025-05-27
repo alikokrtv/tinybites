@@ -12,7 +12,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <Link 
       to={`/product/${product.id}`}
-      className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 block"
+      className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 block h-full flex flex-col"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       data-animate="fade-up"
@@ -39,7 +39,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
         </div>
       </div>
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-grow">
         <h3 className="text-lg font-medium text-gray-800">{product.name}</h3>
         <p className="text-sm text-gray-500 mt-1">{product.category}</p>
       </div>

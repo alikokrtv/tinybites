@@ -261,11 +261,12 @@ export const allProducts: Product[] = [
     name: 'HERBORN Spice Organizer',
     category: 'Storage Boxes',
     categoryId: 'storageBoxes',
-    image: `${STORAGE_BOXES_PATH}lv-295-herborn.jpg`,
+    image: `${STORAGE_BOXES_PATH}LV-310 G.jpg`,
     galleryImages: [
-      `${STORAGE_BOXES_PATH}lv-295-herborn.jpg`,
+      `${STORAGE_BOXES_PATH}LV-310 G.jpg`,
     ],
     colors: ['#FFFFFF', '#F5F5DC'],
+    featured: true,
     code: 'LV-295',
     description: {
       en: 'The Herborn spice rack has four separate sections and spoons that can be separated individually. You can easily carry your spices wherever you want at the same time.',
@@ -297,11 +298,12 @@ export const allProducts: Product[] = [
     name: 'Compartment Storage Box',
     category: 'Storage Boxes',
     categoryId: 'storageBoxes',
-    image: `${STORAGE_BOXES_PATH}lv-254-storage.jpg`,
+    image: `${STORAGE_BOXES_PATH}LV-310 G.jpg`,
     galleryImages: [
-      `${STORAGE_BOXES_PATH}lv-254-storage.jpg`,
+      `${STORAGE_BOXES_PATH}LV-310 G.jpg`,
     ],
     colors: ['#4682B4', '#C08081', '#F0E68C', '#D3D3D3'],
+    featured: true,
     code: 'LV-254',
     description: {
       en: 'With the compartmented storage boxes, you can carry or store your foods anywhere you want by putting them in separate compartments.',
@@ -333,11 +335,12 @@ export const allProducts: Product[] = [
     name: 'MACARON Storage Box',
     category: 'Storage Boxes',
     categoryId: 'storageBoxes',
-    image: `${STORAGE_BOXES_PATH}lv-104-macaron.jpg`,
+    image: `${STORAGE_BOXES_PATH}MAKARON 1,2 LT.jpg`,
     galleryImages: [
-      `${STORAGE_BOXES_PATH}lv-104-macaron.jpg`,
+      `${STORAGE_BOXES_PATH}MAKARON 1,2 LT.jpg`,
     ],
     colors: ['#FF69B4', '#90EE90', '#F0E68C', '#FFA500'],
+    featured: true,
     code: 'LV-104',
     description: {
       en: 'Enjoy taking your food everywhere you want with the Macaron Storage Container. You can also use it for your child\'s lunchbox.',
