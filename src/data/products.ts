@@ -9,19 +9,20 @@ export const allProducts: Product[] = [
   // Tableware
   {
     id: 'tb-lv111',
-    name: 'YOGI Food Plate and Spoon-Fork Set',
+    name: 'Yogi Plate',
     category: 'Tableware',
     categoryId: 'tableware',
-    image: `${TINY_BITES_PATH}lv-111-yogi.jpg`,
+    image: `${TINY_BITES_PATH}tb-lv111gmrseli.jpg`,
     galleryImages: [
-      `${TINY_BITES_PATH}lv-111-yogi.jpg`,
+      `${TINY_BITES_PATH}tb-lv111gmrseli.jpg`,
+      `${TINY_BITES_PATH}lv-111-yogi.jpg`
     ],
     colors: ['#4D7C4E', '#F4C145', '#8D5B8A'],
     featured: true,
     code: 'LV-111',
     description: {
-      en: 'Yogi Food Plate makes eating fun for your kids. The bear-shaped plate with matching spoon and fork turns mealtime into an enjoyable experience for children.',
-      tr: 'Yogi mama tabağı, yemek yemeyi çocuklarınız için eğlenceli hale getiriyor. Kaşık ve çatal ile eşleşen ayı şeklindeki tabak, yemek saatini çocuklar için keyifli bir deneyime dönüştürür.'
+      en: 'Yogi is your little one\'s cutest mealtime buddy! With its bear ears and fun, colorful compartments, it\'s a treat for both the eyes and the tummy. Fruits, snacks, or nuts - everything stays in its place! With Yogi, mealtime becomes more joyful and way more organized!',
+      tr: 'Yogi, miniklerin en sevimli yemek arkadaşı! Ayı kulaklı eğlenceli tasarımı ve renkli bölmeleriyle hem gözlere hem karınlara hitap eder. Meyve mi, kuruyemiş mi, hepsi ayrı bölmesinde! Yogi ile yemek yemek artık daha keyifli, daha düzenli!'
     },
     specifications: {
       en: [
@@ -41,6 +42,45 @@ export const allProducts: Product[] = [
         'Mikrodalga fırında kullanılabilir (çatal-kaşık hariç)',
         'Yeşil, sarı ve mor olmak üzere 3 renk seçeneği',
         'Kutuda 36 adet'
+      ]
+    }
+  },
+  {
+    id: 'tb-lv113',
+    name: 'Yogi Flat Plate + Cutlery Set',
+    category: 'Tableware',
+    categoryId: 'tableware',
+    image: `${TINY_BITES_PATH}yogi-flat-plate.jpeg`,
+    galleryImages: [
+      `${TINY_BITES_PATH}yogi-flat-plate.jpeg`
+    ],
+    colors: ['#4D7C4E', '#F4C145', '#8D5B8A'],
+    featured: true,
+    code: 'LV-113',
+    description: {
+      en: 'Yogi is back - simpler but still super fun! This bear-shaped flat plate is perfect for little ones learning to feed themselves. Paired with a bone-handle fork and spoon, it turns every meal into a playful adventure. Bright colors, easy eating, happy tummies!',
+      tr: 'Yogi şimdi daha sade ama hâlâ çok eğlenceli! Ayı şekilli düz mama tabağı, miniklerin kendi kendine yemeye başlaması için ideal. Yanındaki kemik saplı çatal-kaşık setiyle yemek saatleri hem daha keyifli hem daha pratik. Renkleriyle göz alıcı, tasarımıyla eğlenceli!'
+    },
+    specifications: {
+      en: [
+        'Bear-shaped flat plate design',
+        'Comes with bone-handle utensils',
+        'Made from food-safe BPA-free materials',
+        'Dishwasher safe',
+        'Microwave safe (except utensils)',
+        'Available in multiple colors',
+        'Perfect for self-feeding practice',
+        'Non-slip base to prevent spills'
+      ],
+      tr: [
+        'Ayı şekilli düz tabak tasarımı',
+        'Kemik saplı çatal-kaşık seti ile birlikte',
+        'Gıda güvenliği olan BPA içermeyen malzemelerden üretilmiştir',
+        'Bulaşık makinesinde yıkanabilir',
+        'Mikrodalga fırında kullanılabilir (çatal-kaşık hariç)',
+        'Birden fazla renk seçeneğinde mevcuttur',
+        'Çocukların kendi kendine yemek alışkanlığı kazanması için ideal',
+        'Dökülmeleri önlemek için kaymaz taban'
       ]
     }
   },
@@ -83,19 +123,20 @@ export const allProducts: Product[] = [
   },
   {
     id: 'tb-lv108',
-    name: 'CAR Kids Food Plate',
+    name: 'Car Plate',
     category: 'Tableware',
     categoryId: 'tableware',
-    image: `${TINY_BITES_PATH}lv-108-car.jpg`,
+    image: `${TINY_BITES_PATH}car-plate-new.jpg`,
     galleryImages: [
-      `${TINY_BITES_PATH}lv-108-car.jpg`,
+      `${TINY_BITES_PATH}car-plate-new.jpg`,
+      `${TINY_BITES_PATH}lv-108-car.jpg`
     ],
     colors: ['#89CFF0', '#FFB6C1'],
     featured: true,
     code: 'LV-108',
     description: {
-      en: 'Kids Food Plate makes eating fun for your kids. The car-shaped plate with multiple compartments transforms mealtime into an exciting journey.',
-      tr: 'Araba mama tabağı, yemek yemeyi çocuklarınız için eğlenceli hale getiriyor. Birden fazla bölmeli araba şeklindeki tabak, yemek saatini heyecan verici bir yolculuğa dönüştürür.'
+      en: 'Mealtime goes full speed ahead with our fun Car Plate! With its playful car shape and smart compartments, it keeps food separate and little ones engaged. The perfect ride for happy tummies and tidy tables!',
+      tr: 'Araba şekilli bu eğlenceli tabak, miniklerin öğünlerini hızla keyfe dönüştürüyor! Bölmeli tasarımı sayesinde yiyecekler karışmaz, çocuklar özgürce seçim yapar. Sofrada eğlenceli bir yolculuk başlasın!'
     },
     specifications: {
       en: [
@@ -119,106 +160,63 @@ export const allProducts: Product[] = [
     }
   },
   {
-    id: '1',
-    name: 'Elephant Tableware - Pink',
+    id: 'tb-lv160',
+    name: 'Elephant Plate',
     category: 'Tableware',
     categoryId: 'tableware',
-    image: `${TINY_BITES_PATH}elephant-tableware-pink.jpg`,
+    image: `${TINY_BITES_PATH}elephant-tableware-blue-new.jpg`,
     galleryImages: [
-      `${TINY_BITES_PATH}elephant-tableware-pink.jpg`,
-    ],
-    colors: ['#FFC0CB', '#FFB6C1', '#FF69B4'],
-    featured: true,
-    code: 'LV-160-P',
-    description: {
-      en: 'Our adorable pink elephant-themed tableware is designed specifically for children. Made from high-quality BPA-free materials that are safe for your little ones. The cute elephant design makes mealtime fun and exciting.',
-      tr: 'Sevimli pembe fil temalı yemek takımımız özellikle çocuklar için tasarlanmıştır. Küçükleriniz için güvenli, yüksek kaliteli BPA içermeyen malzemelerden yapılmıştır. Sevimli fil tasarımı yemek zamanını eğlenceli ve heyecanlı hale getirir.'
-    },
-    specifications: {
-      en: [
-        'Made from food-safe BPA-free materials',
-        'Dishwasher safe',
-        'Microwave safe',
-        'Suitable for children 6 months and older',
-        'Separated compartments for different foods',
-        'Non-slip bottom to prevent spills'
-      ],
-      tr: [
-        'Gıda güvenliği olan BPA içermeyen malzemelerden üretilmiştir',
-        'Bulaşık makinesinde yıkanabilir',
-        'Mikrodalga fırında kullanılabilir',
-        '6 ay ve üzeri çocuklar için uygundur',
-        'Farklı yiyecekler için ayrı bölmeler',
-        'Dökülmeleri önlemek için kaymaz taban'
-      ]
-    }
-  },
-  {
-    id: '2',
-    name: 'Elephant Tableware - Blue',
-    category: 'Tableware',
-    categoryId: 'tableware',
-    image: `${TINY_BITES_PATH}elephant-tableware-blue.jpg`,
-    galleryImages: [
+      `${TINY_BITES_PATH}elephant-tableware-blue-new.jpg`,
+      `${TINY_BITES_PATH}elephant-tableware-grey-new.jpg`,
+      `${TINY_BITES_PATH}elephant-tableware-pink-new.jpg`,
       `${TINY_BITES_PATH}elephant-tableware-blue.jpg`,
+      `${TINY_BITES_PATH}elephant-tableware-grey.jpg`,
+      `${TINY_BITES_PATH}elephant-tableware-pink.jpg`
     ],
-    colors: ['#87CEEB', '#1E90FF', '#0000CD'],
+    colors: ['#87CEEB', '#A9A9A9', '#FFC0CB'],
     featured: true,
-    code: 'LV-160-B',
+    code: 'LV-160',
     description: {
-      en: 'Our adorable blue elephant-themed tableware is designed to make mealtime fun for kids. The cute elephant design and bright blue color are appealing to children while the practical compartments make it easy to serve different foods.',
-      tr: 'Sevimli mavi fil temalı yemek takımımız, yemek zamanını çocuklar için eğlenceli hale getirmek için tasarlanmıştır. Sevimli fil tasarımı ve parlak mavi renk çocuklar için çekicidir, pratik bölmeler ise farklı yiyecekleri servis etmeyi kolaylaştırır.'
+      en: 'Mealtime just got way more fun with Elephant! This adorable elephant-shaped plate keeps foods neat and separated with its smart compartments. Elephant makes it perfect for little hands and big appetites!',
+      tr: 'Fil, miniklerin öğünlerini eğlenceli bir serüvene dönüştürüyor! Sevimli fil şekli ve bölmeli tasarımı sayesinde yiyecekler düzenli kalır, minikler severek yer. Fil mama tabagi ile mama savaşları tarih oluyor!'
     },
     specifications: {
       en: [
+        'Elephant-shaped design with compartments',
         'Made from food-safe BPA-free materials',
         'Dishwasher safe',
         'Microwave safe',
         'Suitable for children 6 months and older',
-        'Separated compartments for different foods',
+        'Available in blue, grey, and pink colors',
         'Non-slip bottom to prevent spills'
       ],
       tr: [
+        'Fil şeklinde bölmeli tasarım',
         'Gıda güvenliği olan BPA içermeyen malzemelerden üretilmiştir',
         'Bulaşık makinesinde yıkanabilir',
         'Mikrodalga fırında kullanılabilir',
         '6 ay ve üzeri çocuklar için uygundur',
-        'Farklı yiyecekler için ayrı bölmeler',
-        'Dökülmeleri önlemek için kaymaz taban'
-      ]
-    }
-  },
-  {
-    id: '3',
-    name: 'Elephant Tableware - Grey',
-    category: 'Tableware',
-    categoryId: 'tableware',
-    image: `${TINY_BITES_PATH}elephant-tableware-grey.jpg`,
-    colors: ['#A9A9A9', '#808080', '#696969'],
-    code: 'LV-160-G',
-    description: {
-      en: 'Our elegant grey elephant-themed tableware offers a sophisticated neutral option that complements any table setting. Made from the same high-quality BPA-free materials you expect from all our products, with the same playful design your children will love.',
-      tr: 'Zarif gri fil temalı yemek takımımız, her sofra düzenini tamamlayan sofistike bir nötr seçenek sunar. Tüm ürünlerimizden beklediğiniz yüksek kaliteli BPA içermeyen malzemelerden üretilmiş, çocuklarınızın seveceği aynı eğlenceli tasarıma sahiptir.'
-    },
-    specifications: {
-      en: [
-        'Made from food-safe BPA-free materials',
-        'Dishwasher safe',
-        'Microwave safe',
-        'Suitable for children 6 months and older',
-        'Separated compartments for different foods',
-        'Non-slip bottom to prevent spills'
-      ],
-      tr: [
-        'Gıda güvenliği olan BPA içermeyen malzemelerden üretilmiştir',
-        'Bulaşık makinesinde yıkanabilir',
-        'Mikrodalga fırında kullanılabilir',
-        '6 ay ve üzeri çocuklar için uygundur',
-        'Farklı yiyecekler için ayrı bölmeler',
+        'Mavi, gri ve pembe renk seçenekleri mevcuttur',
         'Dökülmeleri önlemek için kaymaz taban'
       ]
     },
-
+    variants: [
+      {
+        name: 'Blue',
+        color: '#87CEEB',
+        image: `${TINY_BITES_PATH}elephant-tableware-blue-new.jpg`
+      },
+      {
+        name: 'Grey',
+        color: '#A9A9A9',
+        image: `${TINY_BITES_PATH}elephant-tableware-grey-new.jpg`
+      },
+      {
+        name: 'Pink',
+        color: '#FFC0CB',
+        image: `${TINY_BITES_PATH}elephant-tableware-pink-new.jpg`
+      }
+    ]
   },
   {
     id: '4',
@@ -252,25 +250,62 @@ export const allProducts: Product[] = [
         'Hediye kutusu ambalajı mevcuttur'
       ]
     },
-
   },
   
+  {
+    id: 'tb-lv120',
+    name: 'Macaron Snack Container',
+    category: 'Tableware',
+    categoryId: 'tableware',
+    image: `${TINY_BITES_PATH}macaron-container.jpg`,
+    galleryImages: [
+      `${TINY_BITES_PATH}macaron-container.jpg`
+    ],
+    colors: ['#FFB6C1', '#87CEEB', '#98FB98', '#FFFFE0'],
+    featured: true,
+    code: 'LV-120',
+    description: {
+      en: 'Sweet on the outside, smart on the inside! These colorful macaron-shaped containers add a dash of fun to snack time. Perfect for little bites, fruit portions, or playful storage. Cute, compact, and totally crave-worthy!',
+      tr: 'Tatlı bir görünüm, pratik bir kullanım! Macaron şeklindeki bu renkli saklama kapları, atıştırmalıkları veya küçük porsiyonları saklamak için hem şık hem de eğlenceli bir çözüm. Çocukların bayılacağı bir tasarım, annelerin seveceği bir pratiklik!'
+    },
+    specifications: {
+      en: [
+        'Macaron-shaped design',
+        'Made from food-safe BPA-free materials',
+        'Dishwasher safe',
+        'Airtight seal keeps snacks fresh',
+        'Perfect size for kids\'s snacks',
+        'Available in multiple pastel colors',
+        'Stackable for easy storage'
+      ],
+      tr: [
+        'Macaron şeklinde tasarım',
+        'Gıda güvenliği olan BPA içermeyen malzemelerden üretilmiştir',
+        'Bulaşık makinesinde yıkanabilir',
+        'Hava geçirmez kapak atıştırmalıkları taze tutar',
+        'Çocuk atıştırmalıkları için ideal boyut',
+        'Birden fazla pastel renk seçeneği',
+        'İstiflenerek kolay saklama'
+      ]
+    }
+  },
+
   // Storage Boxes
   {
     id: 'sb-lv295',
-    name: 'HERBORN Spice Organizer',
+    name: 'Order in Flavor: Herborn Spice Organizer',
     category: 'Storage Boxes',
     categoryId: 'storageBoxes',
-    image: `${STORAGE_BOXES_PATH}LV-310 G.jpg`,
+    image: `${STORAGE_BOXES_PATH}herborn-spice-organizer.jpeg`,
     galleryImages: [
-      `${STORAGE_BOXES_PATH}LV-310 G.jpg`,
+      `${STORAGE_BOXES_PATH}herborn-spice-organizer.jpeg`,
     ],
     colors: ['#FFFFFF', '#F5F5DC'],
     featured: true,
     code: 'LV-295',
     description: {
-      en: 'The Herborn spice rack has four separate sections and spoons that can be separated individually. You can easily carry your spices wherever you want at the same time.',
-      tr: 'Herborn baharatlık, tek tek ayrılabilen dört ayrı bölüme ve kaşıklara sahiptir. Baharatlarınızı aynı anda istediğiniz yere kolayca taşıyabilirsiniz.'
+      en: 'Herborn is the perfect kitchen companion for those who value both elegance and practicality. With its four-compartment design, you can keep a variety of spices neatly organized in one container. Each section comes with its own spoon and a hygienic lid system for easy use.',
+      tr: 'Herborn baharatlık, mutfakta hem şıklık hem de pratiklik arayanlar için ideal bir yardımcı. Dört bölmeli yapısı sayesinde farklı baharatları aynı kapta düzenli bir şekilde saklamanıza olanak tanır. Her bölme için özel kaşıkları ve kapak tasarımıyla hem hijyenik hem de kullanışlıdır.'
     },
     specifications: {
       en: [
@@ -290,6 +325,43 @@ export const allProducts: Product[] = [
         'Kolayca temizlenebilir',
         'Mutfak organizasyonu için mükemmel',
         'Kutuda 12 adet'
+      ]
+    }
+  },
+  {
+    id: 'sb-lv120',
+    name: 'Macaron Storage Container - For Adults',
+    category: 'Storage Boxes',
+    categoryId: 'storageBoxes',
+    image: `${STORAGE_BOXES_PATH}macaron-container.jpg`,
+    galleryImages: [
+      `${STORAGE_BOXES_PATH}macaron-container.jpg`
+    ],
+    colors: ['#FFB6C1', '#87CEEB', '#98FB98', '#FFFFE0'],
+    featured: true,
+    code: 'LV-120',
+    description: {
+      en: 'With its vibrant and playful design, the Macaron container isn\'t just for kids — it\'s a fun and practical choice for adults too! Perfect for keeping your snacks fresh at the office, during workouts, on the go, or even at home. Its compact size fits easily into your bag, while the secure lid ensures leak-free storage wherever you are.',
+      tr: 'Renkli ve eğlenceli tasarımıyla sadece çocuklar için değil, yetişkinler için de ideal! Macaron saklama kapları; ofiste, sporda, seyahatte ya da evde sağlıklı atıştırmalıklarınızı taze tutmak için şık ve pratik bir çözüm sunar. Kompakt boyutu sayesinde çantada taşımaya uygundur, sızdırmaz yapısıyla konforlu bir kullanım sağlar.'
+    },
+    specifications: {
+      en: [
+        'Elegant macaron-shaped design',
+        'Made from durable BPA-free materials',
+        'Dishwasher safe',
+        'Airtight seal for freshness',
+        'Versatile use for home and office organization',
+        'Available in multiple pastel colors',
+        'Stackable design saves space'
+      ],
+      tr: [
+        'Zarif macaron şeklinde tasarım',
+        'Dayanıklı BPA içermeyen malzemelerden üretilmiştir',
+        'Bulaşık makinesinde yıkanabilir',
+        'Hava geçirmez kapak tazelik sağlar',
+        'Ev ve ofis organizasyonu için çok yönlü kullanım',
+        'Birden fazla pastel renk seçeneği',
+        'İstifleme tasarımı ile yer tasarrufu sağlar'
       ]
     }
   },
@@ -471,7 +543,122 @@ export const allProducts: Product[] = [
 
   },
   
+  {
+    id: 'sb-lv202',
+    name: 'Herborn Storage Container',
+    category: 'Storage Boxes',
+    categoryId: 'storageBoxes',
+    image: `${STORAGE_BOXES_PATH}herborn-storage-1.jpg`,
+    galleryImages: [
+      `${STORAGE_BOXES_PATH}herborn-storage-1.jpg`,
+      `${STORAGE_BOXES_PATH}herborn-storage-2.jpg`
+    ],
+    colors: ['#B0E0E6', '#FFB6C1', '#E6E6FA', '#F0F8FF'],
+    featured: true,
+    code: 'LV-202',
+    description: {
+      en: 'A perfect blend of elegance and practicality for your everyday kitchen needs. The Herborn container features a soft, ribbed exterior design and comes in calming pastel tones. Ideal for storing fruits, snacks, leftovers, or dry ingredients – both at home and on the go.',
+      tr: 'Günlük mutfak ihtiyaçlarınız için şıklık ve pratikliğin mükemmel birleşimi. Herborn, yumuşak dokulu çizgili dış tasarımı ve pastel renk seçenekleriyle dikkat çeker. Meyve, atıştırmalık, artan yemekler veya kuru gıdalar için idealdir – hem evde hem de dışarıda kullanım için uygundur.'
+    },
+    specifications: {
+      en: [
+        'Elegant ribbed exterior design',
+        'Available in multiple pastel colors',
+        'Airtight seal keeps contents fresh',
+        'Microwave, freezer, and dishwasher safe',
+        'Made from high-quality BPA-free materials',
+        'Multiple size options available',
+        'Perfect for home and travel use'
+      ],
+      tr: [
+        'Şık çizgili dış tasarım',
+        'Birden fazla pastel renk seçeneği',
+        'Hava geçirmez kapak içindekilerini taze tutar',
+        'Mikrodalga, dondurucu ve bulaşık makinesinde kullanılabilir',
+        'Yüksek kaliteli BPA içermeyen malzemelerden üretilmiştir',
+        'Birden fazla boyut seçeneği mevcut',
+        'Ev ve seyahat kullanımı için idealdir'
+      ]
+    }
+  },
+  {
+    id: 'sb-lv201',
+    name: 'Shell Food Storage Set',
+    category: 'Storage Boxes',
+    categoryId: 'storageBoxes',
+    image: `${STORAGE_BOXES_PATH}shell-storage-1.jpg`,
+    galleryImages: [
+      `${STORAGE_BOXES_PATH}shell-storage-1.jpg`,
+      `${STORAGE_BOXES_PATH}shell-storage-2.jpg`
+    ],
+    colors: ['#FFFFFF', '#F5F5F5'],
+    featured: true,
+    code: 'LV-201',
+    description: {
+      en: 'A stylish and practical solution for modern kitchens! The Shell series features a sleek, ribbed transparent design that keeps your pantry neat and your dry goods fresh. With various size options, it\'s perfect for storing pasta, legumes, snacks, and more.',
+      tr: 'Modern mutfaklar için hem estetik hem fonksiyonel bir çözüm! Shell serisi, şeffaf ve zarif çizgili yapısıyla dolaplarda düzeni sağlarken, farklı ebatları sayesinde makarna, bakliyat, kuruyemiş gibi ürünleri taze tutar.'
+    },
+    specifications: {
+      en: [
+        'Sleek ribbed transparent design',
+        'Airtight seal for freshness',
+        'Made from high-quality BPA-free materials',
+        'Available in multiple sizes',
+        'Stackable design for space-saving storage',
+        'Dishwasher safe',
+        'Ideal for pantry organization'
+      ],
+      tr: [
+        'Şık çizgili şeffaf tasarım',
+        'Tazelik için hava geçirmez kapak',
+        'Yüksek kaliteli BPA içermeyen malzemelerden üretilmiştir',
+        'Birden fazla boyut seçeneği',
+        'Alan tasarrufu sağlayan istiflenebilir tasarım',
+        'Bulaşık makinesinde yıkanabilir',
+        'Kiler organizasyonu için ideal'
+      ]
+    }
+  },
+
   // Baskets
+  {
+    id: 'bk-lv301',
+    name: 'Shell Basket - Stylish and Functional Storage Solution',
+    category: 'Baskets',
+    categoryId: 'baskets',
+    image: `${BASKETS_PATH}shell-basket-1.jpg`,
+    galleryImages: [
+      `${BASKETS_PATH}shell-basket-1.jpg`,
+      `${BASKETS_PATH}shell-basket-2.jpg`
+    ],
+    colors: ['#F5F5F5', '#EAEAEA', '#D3D3D3'],
+    featured: true,
+    code: 'LV-301',
+    description: {
+      en: 'More than just a basket, Shell is a modern and elegant piece that blends seamlessly into any room in your home. Its lid provides a neat appearance, while the side handles allow for easy carrying. From toys to laundry, textiles to everyday clutter — it keeps everything neatly stored.',
+      tr: 'Shell, sadece bir sepet değil; evinizin her köşesine uyum sağlayan modern ve fonksiyonel bir dekor parçası! Kapağı sayesinde düzenli görünüm sağlarken, kulplarıyla kolay taşınır. Oyuncaklardan çamaşıra, tekstilden günlük dağınıklıklara kadar her şeyi saklamak için ideal.'
+    },
+    specifications: {
+      en: [
+        'Modern and elegant design',
+        'Fitted lid for a neat appearance',
+        'Convenient side handles for easy carrying',
+        'Made from durable materials',
+        'Available in multiple sizes',
+        'Versatile storage solution for any room',
+        'Neutral colors to match any decor'
+      ],
+      tr: [
+        'Modern ve şık tasarım',
+        'Düzenli görünüm için uyumlu kapak',
+        'Kolay taşıma için kulplar',
+        'Dayanıklı malzemelerden üretilmiştir',
+        'Birden fazla boyut seçeneği',
+        'Her oda için çok yönlü depolama çözümü',
+        'Her dekora uyum sağlayan nötr renkler'
+      ]
+    }
+  },
   {
     id: '8',
     name: 'LV-341 Premium Basket',

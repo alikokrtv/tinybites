@@ -120,7 +120,7 @@ export const translations = {
     'products.loren-plastic.description': 'Saklama Kapları ve Sepetler',
     'products.title': 'Ürünlerimiz',
     'products.subtitle': 'Renkli koleksiyonumuzu keşfedin',
-    'products.tableware': 'Sofra Ürünleri',
+    'products.tableware': 'Mama Tabakları',
     'products.storageBoxes': 'Saklama Kutuları',
     'products.baskets': 'Sepetler',
     'products.filter': 'Filtrele',
