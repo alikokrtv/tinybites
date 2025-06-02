@@ -89,9 +89,9 @@ export const allProducts: Product[] = [
     name: 'YOGI Food Table with 4 Compartments',
     category: 'Tableware',
     categoryId: 'tableware',
-    image: `${TINY_BITES_PATH}lv-112-yogi-table.jpg`,
+    image: `${TINY_BITES_PATH}Herborn Spice Organizer.jpeg`,
     galleryImages: [
-      `${TINY_BITES_PATH}lv-112-yogi-table.jpg`,
+      `${TINY_BITES_PATH}Herborn Spice Organizer.jpeg`,
     ],
     colors: ['#4D7C4E', '#F4C145', '#8D5B8A'],
     featured: true,
@@ -328,43 +328,7 @@ export const allProducts: Product[] = [
       ]
     }
   },
-  {
-    id: 'sb-lv120',
-    name: 'Macaron Storage Container - For Adults',
-    category: 'Storage Boxes',
-    categoryId: 'storageBoxes',
-    image: `${STORAGE_BOXES_PATH}macaron-container.jpg`,
-    galleryImages: [
-      `${STORAGE_BOXES_PATH}macaron-container.jpg`
-    ],
-    colors: ['#FFB6C1', '#87CEEB', '#98FB98', '#FFFFE0'],
-    featured: true,
-    code: 'LV-120',
-    description: {
-      en: 'With its vibrant and playful design, the Macaron container isn\'t just for kids — it\'s a fun and practical choice for adults too! Perfect for keeping your snacks fresh at the office, during workouts, on the go, or even at home. Its compact size fits easily into your bag, while the secure lid ensures leak-free storage wherever you are.',
-      tr: 'Renkli ve eğlenceli tasarımıyla sadece çocuklar için değil, yetişkinler için de ideal! Macaron saklama kapları; ofiste, sporda, seyahatte ya da evde sağlıklı atıştırmalıklarınızı taze tutmak için şık ve pratik bir çözüm sunar. Kompakt boyutu sayesinde çantada taşımaya uygundur, sızdırmaz yapısıyla konforlu bir kullanım sağlar.'
-    },
-    specifications: {
-      en: [
-        'Elegant macaron-shaped design',
-        'Made from durable BPA-free materials',
-        'Dishwasher safe',
-        'Airtight seal for freshness',
-        'Versatile use for home and office organization',
-        'Available in multiple pastel colors',
-        'Stackable design saves space'
-      ],
-      tr: [
-        'Zarif macaron şeklinde tasarım',
-        'Dayanıklı BPA içermeyen malzemelerden üretilmiştir',
-        'Bulaşık makinesinde yıkanabilir',
-        'Hava geçirmez kapak tazelik sağlar',
-        'Ev ve ofis organizasyonu için çok yönlü kullanım',
-        'Birden fazla pastel renk seçeneği',
-        'İstifleme tasarımı ile yer tasarrufu sağlar'
-      ]
-    }
-  },
+  // Macaron Storage Container - For Adults ürünü kaldırıldı
   {
     id: 'sb-lv254',
     name: 'Compartment Storage Box',
@@ -545,7 +509,7 @@ export const allProducts: Product[] = [
   
   {
     id: 'sb-lv202',
-    name: 'Herborn Storage Container',
+    name: 'Storage Container',
     category: 'Storage Boxes',
     categoryId: 'storageBoxes',
     image: `${STORAGE_BOXES_PATH}herborn-storage-1.jpg`,
