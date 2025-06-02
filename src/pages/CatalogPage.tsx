@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Download, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
+import { Download, ChevronDown, ChevronUp, ExternalLink, X } from 'lucide-react';
 
 // Path constants for assets
 const CATALOG_ROOT = '/';
@@ -12,6 +12,7 @@ const PRODUCT_IMAGES = {
   tinyBites: {
     main: '/images/tiny-bites/elephant-tableware-1.jpg',
     // Source: c:/Users/aliko/Downloads/wetransfer_tiny-bites_2025-05-09_0838/Tiny Bites/elephant tableware 1.jpg
+    yogiPlate: '/images/tiny-bites/yogi-flat-plate.jpeg'
   },
   storageBoxes: {
     main: '/images/storage-boxes/lv-237-shell.jpg',
@@ -132,17 +133,60 @@ const catalogs: Catalog[] = [
       ]
     },
     featured: false
+  },
+  {
+    id: 4,
+    title: {
+      en: "Loren Catalog",
+      tr: "Loren Katalog"
+    },
+    description: {
+      en: "Explore our latest Loren product collection with innovative designs and premium quality materials.",
+      tr: "Yenilikçi tasarımlar ve premium kalitedeki malzemelerle en yeni Loren ürün koleksiyonumuzu keşfedin."
+    },
+    image: PRODUCT_IMAGES.tinyBites.yogiPlate,
+    pdfFile: "Loren Katalog S.pdf",
+    details: {
+      en: [
+        "Premium quality materials",
+        "Innovative design",
+        "Latest collection"
+      ],
+      tr: [
+        "Premium kalite malzemeler",
+        "Yenilikçi tasarım",
+        "En yeni koleksiyon"
+      ]
+    },
+    featured: false
   }
 ];
 
 const CatalogPage: React.FC = () => {
   const { t } = useLanguage();
   const currentLang = t('language') === 'tr' ? 'tr' : 'en';
-  const [expandedId, setExpandedId] = useState<number | null>(null);
+  // Tüm katalogların detayları başlangıçta açık olsun
+  const [expandedId, setExpandedId] = useState<number[]>(catalogs.map(catalog => catalog.id));
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedCatalog, setSelectedCatalog] = useState<Catalog | null>(null);
   const [filter, setFilter] = useState<'all' | 'featured'>('all');
   
   const toggleExpand = (id: number) => {
-    setExpandedId(expandedId === id ? null : id);
+    if (expandedId.includes(id)) {
+      setExpandedId(expandedId.filter(itemId => itemId !== id));
+    } else {
+      setExpandedId([...expandedId, id]);
+    }
+  };
+
+  const openCatalogPreview = (catalog: Catalog) => {
+    setSelectedCatalog(catalog);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedCatalog(null);
   };
 
   const filteredCatalogs = filter === 'all' 
@@ -227,7 +271,7 @@ const CatalogPage: React.FC = () => {
                       onClick={() => toggleExpand(catalog.id)}
                       className="flex items-center text-primary-600 hover:text-primary-700 transition-colors"
                     >
-                      {expandedId === catalog.id ? (
+                      {expandedId.includes(catalog.id) ? (
                         <>
                           <ChevronUp size={20} className="mr-1" />
                           {currentLang === 'tr' ? 'Detayları Gizle' : 'Hide Details'}
@@ -240,7 +284,7 @@ const CatalogPage: React.FC = () => {
                       )}
                     </button>
                     
-                    {expandedId === catalog.id && (
+                    {expandedId.includes(catalog.id) && (
                       <div className="mt-4 pl-4 border-l-2 border-primary-200">
                         <h3 className="font-medium text-gray-800 mb-2">
                           {currentLang === 'tr' ? 'Ürün Özellikleri' : 'Product Features'}
@@ -251,7 +295,7 @@ const CatalogPage: React.FC = () => {
                           ))}
                         </ul>
                         
-                        <div className="mt-4 pt-4 border-t border-gray-200">
+                        <div className="mt-4 pt-4 border-t border-gray-200 flex gap-4">
                           <a 
                             href={`${CATALOG_ROOT}${catalog.pdfFile}`}
                             target="_blank"
@@ -259,8 +303,15 @@ const CatalogPage: React.FC = () => {
                             className="flex items-center text-blue-600 hover:text-blue-700 transition-colors"
                           >
                             <ExternalLink size={18} className="mr-2" />
-                            {currentLang === 'tr' ? 'Kataloğu Görüntüle' : 'View Catalog'}
+                            {currentLang === 'tr' ? 'Yeni Sekmede Görüntüle' : 'View in New Tab'}
                           </a>
+                          <button
+                            onClick={() => openCatalogPreview(catalog)}
+                            className="flex items-center text-primary-600 hover:text-primary-700 transition-colors"
+                          >
+                            <ExternalLink size={18} className="mr-2" />
+                            {currentLang === 'tr' ? 'Önizleme' : 'Preview'}
+                          </button>
                         </div>
                       </div>
                     )}
@@ -288,6 +339,30 @@ const CatalogPage: React.FC = () => {
           </a>
         </div>
       </div>
+
+      {/* Katalog Önizleme Modal */}
+      {modalOpen && selectedCatalog && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg shadow-lg w-full max-w-4xl max-h-[90vh] flex flex-col">
+            <div className="flex justify-between items-center p-4 border-b">
+              <h3 className="text-xl font-bold">{selectedCatalog.title[currentLang]}</h3>
+              <button 
+                onClick={closeModal}
+                className="text-gray-500 hover:text-gray-700 transition-colors"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            <div className="flex-grow overflow-auto p-1">
+              <iframe 
+                src={`${CATALOG_ROOT}${selectedCatalog.pdfFile}`} 
+                className="w-full h-full min-h-[70vh]" 
+                title={selectedCatalog.title[currentLang]}
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
