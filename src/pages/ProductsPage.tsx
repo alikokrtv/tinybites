@@ -27,8 +27,8 @@ const ProductsPage: React.FC = () => {
   ];
   
   const filteredProducts = activeCategory === 'all' 
-    ? allProducts 
-    : allProducts.filter(product => product.categoryId === activeCategory);
+    ? allProducts.filter(product => !product.hidden)
+    : allProducts.filter(product => product.categoryId === activeCategory && !product.hidden);
   
   return (
     <div className="min-h-screen pt-32 pb-16">

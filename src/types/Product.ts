@@ -12,6 +12,7 @@ export interface Product {
   image: string;
   colors?: string[];
   featured?: boolean;
+  hidden?: boolean;
   galleryImages?: string[];
   code?: string;
   description?: {

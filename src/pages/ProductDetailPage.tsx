@@ -10,7 +10,7 @@ const ProductDetailPage: React.FC = () => {
   const { language } = useLanguage();
   const [activeImage, setActiveImage] = useState(0);
   
-  const product = allProducts.find(p => p.id === id);
+  const product = allProducts.find(p => p.id === id && !p.hidden);
   
   if (!product) {
     return (
@@ -218,7 +218,7 @@ const ProductDetailPage: React.FC = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {allProducts
-              .filter(p => p.categoryId === product.categoryId && p.id !== product.id)
+              .filter(p => p.categoryId === product.categoryId && p.id !== product.id && !p.hidden)
               .slice(0, 4)
               .map((relatedProduct) => (
                 <Link 

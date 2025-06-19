@@ -518,7 +518,8 @@ export const allProducts: Product[] = [
       `${STORAGE_BOXES_PATH}herborn-storage-2.jpg`
     ],
     colors: ['#B0E0E6', '#FFB6C1', '#E6E6FA', '#F0F8FF'],
-    featured: true,
+    featured: false,
+    hidden: true,
     code: 'LV-202',
     description: {
       en: 'A perfect blend of elegance and practicality for your everyday kitchen needs. The Herborn container features a soft, ribbed exterior design and comes in calming pastel tones. Ideal for storing fruits, snacks, leftovers, or dry ingredients – both at home and on the go.',
@@ -728,4 +729,4 @@ export const allProducts: Product[] = [
   }
 ];
 
-export const featuredProducts = allProducts.filter(product => product.featured);
+export const featuredProducts = allProducts.filter(product => product.featured && !product.hidden);
