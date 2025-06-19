@@ -1,4 +1,4 @@
-import { Product } from '../types/Product';
+simport { Product } from '../types/Product';
 
 // Image path constants
 const TINY_BITES_PATH = '/images/tiny-bites/';
@@ -254,7 +254,7 @@ export const allProducts: Product[] = [
   
   {
     id: 'tb-lv120',
-    name: 'Macaron Snack Container',
+    name: 'Macaron Kids',
     category: 'Tableware',
     categoryId: 'tableware',
     image: `${TINY_BITES_PATH}macaron-container.jpg`,
@@ -368,7 +368,7 @@ export const allProducts: Product[] = [
   },
   {
     id: 'sb-lv104',
-    name: 'MACARON Storage Box',
+    name: 'Macaron Adults',
     category: 'Storage Boxes',
     categoryId: 'storageBoxes',
     image: `${STORAGE_BOXES_PATH}MAKARON 1,2 LT.jpg`,
