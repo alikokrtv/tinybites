@@ -439,40 +439,6 @@ export const allProducts: Product[] = [
     }
   },
   {
-    id: '6',
-    name: 'LV-310 Modern Storage',
-    category: 'Storage Boxes',
-    categoryId: 'storageBoxes',
-    image: `${STORAGE_BOXES_PATH}LV-310 G.jpg`,
-    colors: ['#A0A0A0', '#808080', '#606060'],
-    code: 'LV-310',
-    description: {
-      en: "The LV-310 Modern Storage Box combines contemporary design with practical functionality. Perfect for organizing toys, art supplies, or small items in a child's room, this sleek container features a secure lid and easy-grip handles.",
-      tr: 'LV-310 Modern Saklama Kutusu, çağdaş tasarımı pratik işlevsellikle birleştirir. Çocuk odasındaki oyuncakları, sanat malzemelerini veya küçük eşyaları düzenlemek için mükemmel olan bu şık konteyner, güvenli bir kapak ve kolay kavrama kulplarına sahiptir.'
-    },
-    specifications: {
-      en: [
-        'Durable polypropylene construction',
-        'Secure snap-lock lid',
-        'Easy-grip side handles',
-        'Stackable design',
-        'Available in multiple sizes',
-        'Easy to clean with soap and water',
-        'Dimensions: 40 x 30 x 20 cm'
-      ],
-      tr: [
-        'Dayanıklı polipropilen yapı',
-        'Güvenli mandallı kapak',
-        'Kolay kavrama yan kulplar',
-        'İstifleme tasarımı',
-        'Birden fazla boyutta mevcuttur',
-        'Sabun ve su ile kolayca temizlenebilir',
-        'Boyutlar: 40 x 30 x 20 cm'
-      ]
-    },
-
-  },
-  {
     id: '7',
     name: 'Pasta Storage Container',
     category: 'Storage Boxes',
@@ -623,74 +589,6 @@ export const allProducts: Product[] = [
         'Her dekora uyum sağlayan nötr renkler'
       ]
     }
-  },
-  {
-    id: '9',
-    name: 'LV-331 Stylish Basket',
-    category: 'Baskets',
-    categoryId: 'baskets',
-    image: `${BASKETS_PATH}LV-331.jpg`,
-    colors: ['#8B4513', '#A0522D', '#CD853F'],
-    code: 'LV-331',
-    description: {
-      en: 'The LV-331 Stylish Basket combines modern aesthetics with practical storage. Its durable construction and elegant design make it perfect for organizing toys, blankets, or laundry while enhancing your home décor.',
-      tr: 'LV-331 Şık Sepet, modern estetiği pratik depolama ile birleştirir. Dayanıklı yapısı ve zarif tasarımı, ev dekorasyonunuzu zenginleştirirken oyuncakları, battaniyeleri veya çamaşırları düzenlemek için mükemmeldir.'
-    },
-    specifications: {
-      en: [
-        'Made from durable synthetic rattan',
-        'Reinforced handles for easy carrying',
-        'Water-resistant design',
-        'Easy to clean with damp cloth',
-        'Available in multiple sizes and colors',
-        'Collapsible for easy storage when not in use',
-        'Dimensions: 40 x 30 x 25 cm'
-      ],
-      tr: [
-        'Dayanıklı sentetik rattandan üretilmiştir',
-        'Kolay taşıma için güçlendirilmiş kulplar',
-        'Su geçirmez tasarım',
-        'Nemli bezle kolayca temizlenebilir',
-        'Birden fazla boyut ve renkte mevcuttur',
-        'Kullanılmadığında kolay depolama için katlanabilir',
-        'Boyutlar: 40 x 30 x 25 cm'
-      ]
-    },
-
-  },
-  {
-    id: '10',
-    name: 'LV-330 Green Basket',
-    category: 'Baskets',
-    categoryId: 'baskets',
-    image: `${BASKETS_PATH}LV-330.jpg`,
-    colors: ['#2E8B57', '#3CB371', '#90EE90'],
-    code: 'LV-330',
-    description: {
-      en: "The LV-330 Green Basket brings a touch of nature to your storage solutions. With its vibrant green color and practical design, this basket is perfect for organizing children's toys, books, or as decorative storage in any room.",
-      tr: 'LV-330 Yeşil Sepet, depolama çözümlerinize doğanın dokusunu getirir. Canlı yeşil rengi ve pratik tasarımıyla bu sepet, çocuk oyuncaklarını, kitaplarını düzenlemek veya herhangi bir odada dekoratif depolama olarak kullanmak için mükemmeldir.'
-    },
-    specifications: {
-      en: [
-        'Eco-friendly construction',
-        'Lightweight yet durable design',
-        'Easy-grip integrated handles',
-        'Wipe clean with damp cloth',
-        'Stackable when not in use',
-        'Available in multiple sizes',
-        'Dimensions: 35 x 25 x 20 cm'
-      ],
-      tr: [
-        'Çevre dostu yapı',
-        'Hafif ancak dayanıklı tasarım',
-        'Kolay kavrama entegre kulplar',
-        'Nemli bezle silinerek temizlenebilir',
-        'Kullanılmadığında istifleme özelliği',
-        'Birden fazla boyutta mevcuttur',
-        'Boyutlar: 35 x 25 x 20 cm'
-      ]
-    },
-
   }
 ];
 
