@@ -153,8 +153,8 @@ const HomePage: React.FC = () => {
             <AnimatedSection animation="zoom-in" delay={100}>
               <div className="aspect-square bg-secondary-300 rounded-2xl p-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <img 
-                  src="/images/storage-boxes/lv-237-shell.jpg" 
-                  alt="Shell Storage Boxes Set" 
+                  src="/images/storage-boxes/lv-331-lv-341.png" 
+                  alt="Shell Basket - Stylish and Functional Storage Solution" 
                   className="max-h-full rounded-lg"
                 />
               </div>
@@ -173,7 +173,7 @@ const HomePage: React.FC = () => {
             <AnimatedSection animation="zoom-in" delay={300}>
               <div className="aspect-square bg-secondary-400 rounded-2xl p-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <img 
-                  src="/images/baskets/lv-331-lv-341.png" 
+                  src="/images/baskets/premium-collection.png" 
                   alt="Premium baskets collection" 
                   className="max-h-full rounded-lg"
                 />
