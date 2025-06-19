@@ -173,8 +173,8 @@ const HomePage: React.FC = () => {
             <AnimatedSection animation="zoom-in" delay={300}>
               <div className="aspect-square bg-secondary-400 rounded-2xl p-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <img 
-                  src="/images/baskets/premium-collection.png" 
-                  alt="Premium baskets collection" 
+                  src="/images/baskets/LV-330.jpg" 
+                  alt="Stylish storage baskets" 
                   className="max-h-full rounded-lg"
                 />
               </div>

@@ -625,41 +625,6 @@ export const allProducts: Product[] = [
     }
   },
   {
-    id: '8',
-    name: 'LV-341 Premium Basket',
-    category: 'Baskets',
-    categoryId: 'baskets',
-    image: `${BASKETS_PATH}lv-331-lv-341.png`,
-    galleryImages: [
-      `${BASKETS_PATH}lv-331-lv-341.png`,
-    ],
-    colors: ['#D2B48C', '#DEB887', '#F5DEB3'],
-    featured: true,
-    code: 'LV-341',
-    description: {
-      en: 'The LV-341 Premium Basket combines functionality with elegance. This handcrafted basket is perfect for storing toys, laundry, or as a decorative element in any room. The sturdy construction ensures durability for years to come.',
-      tr: 'LV-341 Premium Sepet, işlevselliği zarafetle birleştirir. Bu el yapımı sepet, oyuncakları, çamaşırları saklamak veya herhangi bir odada dekoratif bir eleman olarak kullanmak için mükemmeldir. Sağlam yapısı, uzun yıllar dayanıklılık sağlar.'
-    },
-    specifications: {
-      en: [
-        'Made from eco-friendly materials',
-        'Handcrafted with attention to detail',
-        'Sturdy handles for easy carrying',
-        'Generous capacity for storage',
-        'Available in multiple sizes and colors',
-        'Wipe clean with damp cloth'
-      ],
-      tr: [
-        'Çevre dostu malzemelerden üretilmiştir',
-        'Detaylara özen gösterilerek el yapımı',
-        'Kolay taşıma için sağlam kulplar',
-        'Depolama için geniş kapasite',
-        'Çeşitli boyut ve renklerde mevcuttur',
-        'Nemli bezle silerek temizleyebilirsiniz'
-      ]
-    }
-  },
-  {
     id: '9',
     name: 'LV-331 Stylish Basket',
     category: 'Baskets',
