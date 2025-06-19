@@ -590,9 +590,9 @@ export const allProducts: Product[] = [
     name: 'Shell Basket - Stylish and Functional Storage Solution',
     category: 'Baskets',
     categoryId: 'baskets',
-    image: `${BASKETS_PATH}shell-basket-1.jpg`,
+    image: `${BASKETS_PATH}lv-331-lv-341.png`,
     galleryImages: [
-      `${BASKETS_PATH}shell-basket-1.jpg`,
+      `${BASKETS_PATH}lv-331-lv-341.png`,
       `${BASKETS_PATH}shell-basket-2.jpg`
     ],
     colors: ['#F5F5F5', '#EAEAEA', '#D3D3D3'],
