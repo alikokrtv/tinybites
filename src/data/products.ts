@@ -94,7 +94,8 @@ export const allProducts: Product[] = [
       `${TINY_BITES_PATH}Herborn Spice Organizer.jpeg`,
     ],
     colors: ['#4D7C4E', '#F4C145', '#8D5B8A'],
-    featured: true,
+    featured: false,
+    hidden: true,
     code: 'LV-112',
     description: {
       en: 'Yogi Food Plate makes eating fun for your kids. The bear-shaped plate with 4 separate compartments helps children enjoy a variety of foods in an organized way.',
