@@ -1,4 +1,4 @@
-simport { Product } from '../types/Product';
+import { Product } from '../types/Product';
 
 // Image path constants
 const TINY_BITES_PATH = '/images/tiny-bites/';
