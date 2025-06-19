@@ -523,7 +523,8 @@ export const allProducts: Product[] = [
       `${STORAGE_BOXES_PATH}shell-storage-2.jpg`
     ],
     colors: ['#FFFFFF', '#F5F5F5'],
-    featured: true,
+    featured: false,
+    hidden: true,
     code: 'LV-201',
     description: {
       en: 'A stylish and practical solution for modern kitchens! The Shell series features a sleek, ribbed transparent design that keeps your pantry neat and your dry goods fresh. With various size options, it\'s perfect for storing pasta, legumes, snacks, and more.',
