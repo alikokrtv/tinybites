@@ -10,7 +10,7 @@ export const allProducts: Product[] = [
   {
     id: 'tb-lv111',
     name: 'Yogi Plate',
-    category: 'Tableware',
+    category: 'Storage Boxes',
     categoryId: 'tableware',
     image: `${TINY_BITES_PATH}tb-lv111gmrseli.jpg`,
     galleryImages: [
@@ -124,8 +124,8 @@ export const allProducts: Product[] = [
   {
     id: 'tb-lv108',
     name: 'Car Plate',
-    category: 'Tableware',
-    categoryId: 'tableware',
+    category: 'Storage Boxes',
+    categoryId: 'storageBoxes',
     image: `${TINY_BITES_PATH}car-plate-new.jpg`,
     galleryImages: [
       `${TINY_BITES_PATH}car-plate-new.jpg`,
@@ -162,8 +162,8 @@ export const allProducts: Product[] = [
   {
     id: 'tb-lv160',
     name: 'Elephant Plate',
-    category: 'Tableware',
-    categoryId: 'tableware',
+    category: 'Storage Boxes',
+    categoryId: 'storageBoxes',
     image: `${TINY_BITES_PATH}elephant-tableware-blue-new.jpg`,
     galleryImages: [
       `${TINY_BITES_PATH}elephant-tableware-blue-new.jpg`,
