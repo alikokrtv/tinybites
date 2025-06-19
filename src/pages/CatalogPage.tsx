@@ -17,6 +17,8 @@ const PRODUCT_IMAGES = {
   storageBoxes: {
     main: '/images/storage-boxes/lv-237-shell.jpg',
     // Source: c:/Users/aliko/Downloads/wetransfer_tiny-bites_2025-05-09_0838/Storage Boxes/LV-237 Shell Erzak Set.jpg
+    shellStorage1: '/images/storage-boxes/shell-storage-1.jpg',
+    shellStorage2: '/images/storage-boxes/shell-storage-2.jpg'
   },
   baskets: {
     main: '/images/baskets/lv-331-lv-341.png',
@@ -77,29 +79,33 @@ const catalogs: Catalog[] = [
   {
     id: 2,
     title: {
-      en: "Storage Boxes",
-      tr: "Saklama Kutuları"
+      en: "Shell Storage Containers",
+      tr: "Shell Saklama Kapları"
     },
     description: {
-      en: "Organize toys, clothes, and accessories with our durable and stylish storage boxes. Perfect for children's rooms and playrooms.",
-      tr: "Dayanıklı ve şık saklama kutularımızla oyuncakları, kıyafetleri ve aksesuarları düzenleyin. Çocuk odaları ve oyun odaları için mükemmel."
+      en: "Modern ribbed design storage containers perfect for organizing your kitchen pantry. These transparent containers keep your food visible and fresh while adding style to your space.",
+      tr: "Mutfak kileri düzenlemek için mükemmel, modern oluklu tasarıma sahip saklama kapları. Bu şeffaf kaplar, yiyeceklerinizi görünür ve taze tutarken alanınıza stil katar."
     },
-    image: PRODUCT_IMAGES.storageBoxes.main,
+    image: PRODUCT_IMAGES.storageBoxes.shellStorage1,
     pdfFile: "Storage Boxes.pdf",
     details: {
       en: [
-        "Durable construction for long-lasting use",
-        "Available in various sizes and colors",
-        "Stackable design to save space",
-        "Easy-to-clean surfaces",
-        "Lightweight and portable"
+        "Ribbed transparent design for elegant appearance",
+        "Airtight lids to keep food fresh longer",
+        "Stackable design for efficient storage",
+        "Perfect for pasta, beans, cereals, and dry goods",
+        "Easy to clean and dishwasher safe",
+        "Various sizes available for different storage needs",
+        "BPA-free materials safe for food storage"
       ],
       tr: [
-        "Uzun ömürlü kullanım için dayanıklı yapı",
-        "Çeşitli boyut ve renklerde mevcuttur",
-        "Alan tasarrufu sağlayan istifleme tasarımı",
-        "Kolay temizlenebilen yüzeyler",
-        "Hafif ve taşınabilir"
+        "Şık görünüm için oluklu şeffaf tasarım",
+        "Yiyecekleri daha uzun süre taze tutmak için hava geçirmez kapaklar",
+        "Verimli depolama için istifleme tasarımı",
+        "Makarna, fasulye, tahıllar ve kuru gıdalar için idealdir",
+        "Kolay temizlenir ve bulaşık makinesinde yıkanabilir",
+        "Farklı depolama ihtiyaçları için çeşitli boyutlar mevcuttur",
+        "Gıda saklamak için güvenli BPA içermeyen malzemeler"
       ]
     },
     featured: true
