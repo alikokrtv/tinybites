@@ -125,8 +125,8 @@ export const allProducts: Product[] = [
   {
     id: 'tb-lv108',
     name: 'Car Plate',
-    category: 'Storage Boxes',
-    categoryId: 'storageBoxes',
+    category: 'Tableware',
+    categoryId: 'tableware',
     image: `${TINY_BITES_PATH}car-plate-new.jpg`,
     galleryImages: [
       `${TINY_BITES_PATH}car-plate-new.jpg`,
@@ -163,13 +163,14 @@ export const allProducts: Product[] = [
   {
     id: 'tb-lv160',
     name: 'Elephant Plate',
-    category: 'Storage Boxes',
-    categoryId: 'storageBoxes',
+    category: 'Tableware',
+    categoryId: 'tableware',
     image: `${TINY_BITES_PATH}elephant-tableware-blue-new.jpg`,
     galleryImages: [
       `${TINY_BITES_PATH}elephant-tableware-blue-new.jpg`,
       `${TINY_BITES_PATH}elephant-tableware-grey-new.jpg`,
       `${TINY_BITES_PATH}elephant-tableware-pink-new.jpg`,
+      `${TINY_BITES_PATH}elephant-tableware-1.jpg`,
       `${TINY_BITES_PATH}elephant-tableware-blue.jpg`,
       `${TINY_BITES_PATH}elephant-tableware-grey.jpg`,
       `${TINY_BITES_PATH}elephant-tableware-pink.jpg`
@@ -219,39 +220,7 @@ export const allProducts: Product[] = [
       }
     ]
   },
-  {
-    id: '4',
-    name: 'Kids Dinner Set',
-    category: 'Tableware',
-    categoryId: 'tableware',
-    image: `${TINY_BITES_PATH}elephant-tableware-1.jpg`,
-    colors: ['#FFC0CB', '#87CEEB', '#A9A9A9', '#FFFFFF'],
-    code: 'LV-160-SET',
-    description: {
-      en: 'The complete dinner set for kids gives you everything you need for a perfect mealtime experience. This set includes our popular elephant-themed plate, bowl, cup, and utensils in coordinating colors. The perfect gift for new parents!',
-      tr: 'Çocuklar için komple yemek seti, mükemmel bir yemek deneyimi için ihtiyacınız olan her şeyi sunar. Bu set, birbirine uyumlu renklerde popüler fil temalı tabak, kase, bardak ve çatal bıçak takımını içerir. Yeni ebeveynler için mükemmel bir hediye!'
-    },
-    specifications: {
-      en: [
-        'Complete set includes: plate, bowl, cup, fork, and spoon',
-        'Made from food-safe BPA-free materials',
-        'Dishwasher safe',
-        'Microwave safe (except utensils)',
-        'Suitable for children 6 months and older',
-        'Available in multiple color options',
-        'Gift box packaging available'
-      ],
-      tr: [
-        'Komple set içeriği: tabak, kase, bardak, çatal ve kaşık',
-        'Gıda güvenliği olan BPA içermeyen malzemelerden üretilmiştir',
-        'Bulaşık makinesinde yıkanabilir',
-        'Mikrodalga fırında kullanılabilir (çatal-kaşık hariç)',
-        '6 ay ve üzeri çocuklar için uygundur',
-        'Birden fazla renk seçeneğinde mevcuttur',
-        'Hediye kutusu ambalajı mevcuttur'
-      ]
-    },
-  },
+
   
   {
     id: 'tb-lv120',
@@ -332,12 +301,13 @@ export const allProducts: Product[] = [
   // Macaron Storage Container - For Adults ürünü kaldırıldı
   {
     id: 'sb-lv254',
-    name: 'Compartment Storage Box',
+    name: 'Storage Container',
     category: 'Storage Boxes',
     categoryId: 'storageBoxes',
-    image: `${STORAGE_BOXES_PATH}LV-310 G.jpg`,
+    image: `${STORAGE_BOXES_PATH}Storage Boxes (2).pdf-image-003.jpg`,
     galleryImages: [
-      `${STORAGE_BOXES_PATH}LV-310 G.jpg`,
+      `${STORAGE_BOXES_PATH}Storage Boxes (2).pdf-image-003.jpg`,
+      `${STORAGE_BOXES_PATH}Storage Boxes (2).pdf-image-004.jpg`
     ],
     colors: ['#4682B4', '#C08081', '#F0E68C', '#D3D3D3'],
     featured: true,
@@ -439,40 +409,7 @@ export const allProducts: Product[] = [
       ]
     }
   },
-  {
-    id: '7',
-    name: 'Pasta Storage Container',
-    category: 'Storage Boxes',
-    categoryId: 'storageBoxes',
-    image: `${STORAGE_BOXES_PATH}MAKARON 1,2 LT.jpg`,
-    colors: ['#F5F5DC', '#FAEBD7', '#FFE4C4'],
-    code: 'LV-MAKARON-1.2',
-    description: {
-      en: 'Our Pasta Storage Container is specially designed to keep pasta, cereals, and dried goods fresh and organized. The airtight seal locks in freshness while the transparent design lets you see contents at a glance. Perfect for family kitchens!',
-      tr: 'Makarna Saklama Kabımız, makarna, tahıllar ve kuru gıdaları taze ve düzenli tutmak için özel olarak tasarlanmıştır. Hava geçirmez conta tazeliği korurken, şeffaf tasarım içindekileri bir bakışta görmenizi sağlar. Aile mutfakları için mükemmel!'
-    },
-    specifications: {
-      en: [
-        '1.2 liter capacity',
-        'Airtight silicone seal',
-        'BPA-free plastic construction',
-        'Transparent body for easy content visibility',
-        'Dishwasher safe (top rack)',
-        'Easy-open lid',
-        'Stackable design saves cabinet space'
-      ],
-      tr: [
-        '1,2 litre kapasite',
-        'Hava geçirmez silikon conta',
-        'BPA içermeyen plastik yapı',
-        'İçeriğin kolayca görülebilmesi için şeffaf gövde',
-        'Bulaşık makinesinde yıkanabilir (üst raf)',
-        'Kolay açılır kapak',
-        'Dolap alanından tasarruf sağlayan istifleme tasarımı'
-      ]
-    },
 
-  },
   
   {
     id: 'sb-lv202',
@@ -562,7 +499,9 @@ export const allProducts: Product[] = [
     image: `${BASKETS_PATH}lv-331-lv-341.png`,
     galleryImages: [
       `${BASKETS_PATH}lv-331-lv-341.png`,
-      `${BASKETS_PATH}shell-basket-2.jpg`
+      `${BASKETS_PATH}Baskets (1).pdf-image-014.jpg`,
+      `${BASKETS_PATH}Baskets (1).pdf-image-001.jpg`,
+      `${BASKETS_PATH}Baskets (1).pdf-image-000.jpg`
     ],
     colors: ['#F5F5F5', '#EAEAEA', '#D3D3D3'],
     featured: true,
