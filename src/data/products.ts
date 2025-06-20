@@ -170,10 +170,7 @@ export const allProducts: Product[] = [
       `${TINY_BITES_PATH}elephant-tableware-blue-new.jpg`,
       `${TINY_BITES_PATH}elephant-tableware-grey-new.jpg`,
       `${TINY_BITES_PATH}elephant-tableware-pink-new.jpg`,
-      `${TINY_BITES_PATH}elephant-tableware-1.jpg`,
-      `${TINY_BITES_PATH}elephant-tableware-blue.jpg`,
-      `${TINY_BITES_PATH}elephant-tableware-grey.jpg`,
-      `${TINY_BITES_PATH}elephant-tableware-pink.jpg`
+      `${TINY_BITES_PATH}elephant-tableware-1.jpg`
     ],
     colors: ['#87CEEB', '#A9A9A9', '#FFC0CB'],
     featured: true,
