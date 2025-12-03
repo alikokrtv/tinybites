@@ -1,5 +1,41 @@
 [build]
   functions = "netlify/functions"
+  publish = "dist"
+  command = "npm run build"
   
 [dev]
   functions = "netlify/functions"
+
+# Force HTTPS
+[[redirects]]
+  from = "http://tinybites.net/*"
+  to = "https://tinybites.net/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.tinybites.net/*"
+  to = "https://tinybites.net/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.tinybites.net/*"
+  to = "https://tinybites.net/:splat"
+  status = 301
+  force = true
+
+# SPA routing - must be last
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
