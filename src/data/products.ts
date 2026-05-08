@@ -1,5 +1,6 @@
 import { Product } from '../types/Product';
 
+// Build trigger: 2026-05-08
 // Image path constants
 const TINY_BITES_PATH = '/images/tiny-bites/';
 const STORAGE_BOXES_PATH = '/images/storage-boxes/';
